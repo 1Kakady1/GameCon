@@ -1,0 +1,53 @@
+mixin printProd(price,selMoney,sel,prodIMG,cat,cInfo,codeProd,prodUrl,prId)
+	.col-3
+		a(href="#" class="product")
+			.wrap
+				.wrap-price
+					.price
+						p.price-prod= price
+						if(selMoney != null)
+						p= selMoney
+					if(sel != null)
+					.sel= sel
+				.prod-img
+					img(src="./img/"+prodIMG class="prod-img__c")
+				.info
+					p= cat
+					span(class='title-prod')= cInfo
+					p.cod= codeProd
+						button(class='btn-list-add add', id=""+prId) +
+mixin printComments(img,name,star,comment)
+	.col-2.com-p.fade
+		img(src="./img/"+img)
+		p.name= name
+		.stars
+			-var active = star;
+			-for(var x=0; x<5; x++){
+			-if(x<active){
+			i(class="fas fa-star")
+			-}
+			-else{
+			i(class="far fa-star")
+			-}
+			-}
+		.comments.hide= comment
+mixin printLnews(img_news,date,annon,views)
+	.col-4
+		a(href="#", class="post")
+			img(src="./img/"+img_news)
+			.post-info
+				span.date= date
+				p.content= annon
+				.comment 
+					i(class="fas fa-comments")
+					span= views 
+mixin printMenuFooter(count,Title,Meny)
+	-for(var x=0; x<count; x++){
+	.col-2.wrap-icon-info__text
+		h2= Title[x]
+			ul
+				-for(var y=0; y<Meny[x].length; y++){
+				li
+					a(href="#")= Meny[x][y]
+				-}
+	-}

@@ -1,0 +1,141 @@
+=font_my($name,$name_url)
+	@font-face
+		font-family: $name
+		src: url(../fonts/#{$name_url}.ttf)
+		src: url(../fonts/#{$name_url}.woff)
+		src: url(../fonts/#{$name_url}.woff2)
+
++font_my(open-sans-semi-bold,opensanssemibold)
++font_my(open-sans-extra-bold,opensansextrabold)
+
+*
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box; 
+
+a, a:hover, button, li:hover, button:hover,.tab-menu, .tab-menu:hover, .anime 
+	-moz-transition: all 200ms linear;
+	-ms-transition: all 200ms linear;
+	-o-transition: all 200ms linear;
+	-webkit-transition: all 200ms linear;
+	transition: all 200ms linear;
+	cursor: pointer;
+a
+	color: #ffffff
+	text-decoration: none;
+	&:hover
+		color: #ffffff
+		text-decoration: none;
+body
+	margin: 0
+
+@import _header
+@import _slider
+@import _news
+@import _footer
+
+
+.active-btn
+	background-color: #f2ca5b!important;
+
+.show 
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+.hide
+	display: none;
+
+.fade 
+	-webkit-animation-name: fade;
+	animation-name: fade;
+	-webkit-animation-duration: 2.5s;
+	animation-duration: 2.5s;
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 2.5s;
+
+@-webkit-keyframes fade 
+	from 
+		opacity: 0.1;
+  
+	to 
+		opacity: 1;
+  
+
+@keyframes fade 
+	from 
+		opacity: 0.1;
+  
+	to 
+		opacity: 1;
+.fade:not(.show) 
+	opacity: 1;
+
+
+@-webkit-keyframes slideOutLeft 
+	from
+		-webkit-transform: translate3d(0, 0, 0);
+	to 
+		visibility: hidden;
+		-webkit-transform: translate3d(-100%, 0, 0);
+
+@keyframes slideOutLeft 
+	from
+		transform: translate3d(0, 0, 0);
+	to 
+		visibility: hidden;
+		transform: translate3d(-100%, 0, 0);
+
+.slideOutLeft
+	animation-name: slideOutLeft;
+	-webkit-animation-name: slideOutLeft;
+	-webkit-animation-duration: 2.5s;
+	animation-duration: 2.5s;
+	-webkit-animation-name: slideOutLeft;
+	-webkit-animation-duration: 2.5s;
+
+
+@-webkit-keyframes slideInLeft
+	from 
+		-webkit-transform: translate3d(-100%, 0, 0);
+		visibility: visible;
+	to
+		-webkit-transform: translate3d(0, 0, 0);
+@keyframes slideInLeft
+	from 
+		transform: translate3d(-100%, 0, 0);
+		visibility: visible;
+	to
+		transform: translate3d(0, 0, 0);
+.slideInLeft 
+	animation-name: slideInLeft;
+	-webkit-animation-name: slideInLeft;
+	-webkit-animation-duration: 2.5s;
+	animation-duration: 2.5s;
+	-webkit-animation-name: slideInLeft;
+	-webkit-animation-duration: 2.5s;
+
+@-webkit-keyframes slideOutRight 
+	from 
+		-webkit-transform: translate3d(0, 0, 0);
+	to 
+		visibility: hidden;
+		-webkit-transform: translate3d(130%, 0, 0);
+
+@keyframes slideOutRight 
+	from 
+		transform: translate3d(0, 0, 0);
+	to 
+		visibility: hidden;
+		transform: translate3d(130%, 0, 0);
+.slideOutRight 
+	animation-name: slideOutRight;
+	-webkit-animation-name: slideOutRight;
+	-webkit-animation-duration: 4.5s;
+	animation-duration: 4.5s;
+	-webkit-animation-name: slideOutRight;
+	-webkit-animation-duration: 4.5s;
+
+@import _media
+
