@@ -1,0 +1,78 @@
+.news, .game
+	margin-left: 110px
+	margin-right: 110px	
+	.news-headr, .game-headr
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		flex-flow: row nowrap;
+		border-bottom: 5px solid #f7f7f7
+		.news-headr__title, .game-headr__title
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-flow: row nowrap;
+			align-items: center;
+			padding-bottom: 6px;
+			h1
+				color: #272727;
+				font-family: "open-sans-extra-bold";
+				font-size: 40px;
+				font-weight: 400;
+				line-height: 24px;
+				margin: 0 0 0 38px;
+.game
+	margin-left: 0
+	margin-right: 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-flow: row nowrap
+	.game-left-bg
+		height: 100%;
+		width: 5%;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;	
+	.game-wrap
+		width: 95%
+		padding-left: 38px
+		padding-right: 110px
+	.game-headr
+		border-bottom: none!important
+		padding-top: 52px
+		padding-bottom: 68px
+	.game-slider 
+		display: flex;
+		align-items: center;
+		width: 65%;
+		justify-content: space-between;
+		&__btn .prev-btn, &__btn .next-btn
+			width: 60px;
+			height: 60px;
+			border: none
+			svg
+				width: 100%
+				height: 100%
+				fill:  #ffffff
+		&__dot
+			margin-left: 9vw;
+	.game-post
+		background: #ffffff
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-flow: row wrap
+		.post
+			&-wrap
+				width: 50%
+				display: flex;
+				flex-flow: row nowrap;

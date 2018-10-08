@@ -2,7 +2,7 @@
 	.news-headr
 		.news-headr__title
 			h1 новости
-			a(href="#" class="news-link") Все новости
+			a(href="#" class="link-st") Все новости
 		.news-headr__list
 			select#propertyType.select.form-control.input-lg(form='addProperty', name='propertyType')
 				option(value='0', selected) Все новости
@@ -78,3 +78,5 @@
 						.post-title
 							hr
 							p Это то, зачем нужны игры: мы спасли 350 сирийских детей
+				
+			button(type="submit", class="news-load") Подгрузить еще

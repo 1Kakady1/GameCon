@@ -1,45 +1,5 @@
 .news
-	margin-left: 110px
-	margin-right: 110px
 	.news-headr
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		justify-content: space-between
-		flex-flow: row nowrap;
-		border-bottom: 5px solid #f7f7f7
-		&__title
-			display: -webkit-flex
-			display: -moz-flex
-			display: -ms-flex
-			display: -o-flex
-			display: flex
-			flex-flow: row nowrap;
-			align-items: center;
-			padding-bottom: 6px;
-			h1
-				color: #272727;
-				font-family: "open-sans-extra-bold";
-				font-size: 40px;
-				font-weight: 400;
-				line-height: 24px;
-				margin: 0 0 0 38px;
-			.news-link
-				text-decoration: none;
-				border-bottom: 1px dashed #30b5d8;
-				color: #30b5d8;
-				font-family: "Open Sans", sans-serif;
-				font-size: 18px;
-				font-weight: 300;
-				line-height: 24px;	
-				margin-left: 42px
-				position: relative;
-				top: 4px;
-				&:hover
-					color: #000000
-					border-bottom: 1px dashed #000080;
 		&__list
 			select
 				width: 350px;
@@ -105,7 +65,7 @@
 					width: 100%;
 					height: auto;
 					color: #ffffff;
-					font-family: "Uni Sans Thin Italic CAPS";
+					font-family: 'Nunito', sans-serif;
 					font-size: 24px;
 					font-weight: 400;
 					line-height: 36px;
@@ -129,12 +89,32 @@
 					-webkit-transition: all 200ms linear;
 					transition: all 200ms linear;
 					z-index: 5
+	.news-load
+		text-align: center;
+		margin: 0 auto;
+		color: #272727;
+		font-family: "Open Sans", sans-serif;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 24px;
+		background: #ffffff
+		border: 3px solid #30b5d8
+			radius: 43px
+		width: 350px;
+		height: 60px;
+		margin-bottom: 80px;
+		margin-top: 80px;
+		position: relative;
+		z-index: 6;
+		&:hover
+			background: #30b5d8
+			color: #ffffff	
 .post-title.post-title__bg
 	hr
 		margin-top: 40px
 	h1
 		color: #000000;
-		font-family: "Uni Sans Thin CAPS";
+		font-family: 'Nunito', sans-serif;
 		font-size: 24px;
 		font-weight: 400;
 		line-height: 30px;
@@ -144,7 +124,7 @@
 		padding-top: 56px;
 		padding-left: 19px;
 		span
-			font-family: "Uni Sans Heavy CAPS";
+			font-family: 'Nunito', sans-serif;
 			font-weight: 800;
 			letter-spacing: 0.24px;
 	& > p
@@ -167,6 +147,6 @@
 		& > hr
 			left: 48px!important
 	& .link-hover__p .post-shadow
-		    z-index: -1;
+			z-index: -1;
 
 
