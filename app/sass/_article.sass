@@ -34,10 +34,10 @@
 				width: 79%;
 				display: inline-block;
 			.post-pr
-				width: 100%
+				width: 65%
 				height: 430px
 				padding-top: 15px;
-				margin-right: 62px;
+				margin-right: 35px;
 				display: inline-block;
 				img
 					width: 100%
@@ -54,13 +54,25 @@
 				height: 460px;
 				border: 2px solid #f2f2ef;
 				margin-bottom: 14px
+				-moz-transition: all 1s linear;
+				-ms-transition: all 1s linear;
+				-o-transition: all 1s linear;
+				-webkit-transition: all 1s linear;
+				transition: all 1s linear;
+				&:hover
+					-moz-transition: all 1s linear;
+					-ms-transition: all 1s linear;
+					-o-transition: all 1s linear;
+					-webkit-transition: all 1s linear;
+					transition: all 1s linear;
+					background: #2d95bf
+					.post-content h1,p
+						color: #ffffff
 				&__left
-					margin-left: 31px
+					margin-left: 26px
 				a
 					width: 100%
 					height: 100%
-				h1,p, .date, .month, .count
-					color: #000000;
 			&-title
 				display: -webkit-flex
 				display: -moz-flex
@@ -114,6 +126,14 @@
 				display: flex
 				flex-direction: column
 				padding-left: 19px;
+				&__view, &__com
+					.count
+						color: #000
+				.count
+					font-family: 'Nunito', sans-serif;
+					font-size: 14px;
+					font-weight: 400;
+					text-transform: uppercase;
 				h1
 					margin: 12px 0 0 0;
 					width: 240px
@@ -125,7 +145,7 @@
 					font-weight: 700;
 					line-height: 24px;
 					text-transform: uppercase;
-				.post-wrap
+				.post-wrap__com
 					width: 100%
 					height: 100%
 					display: flex;
@@ -148,6 +168,3 @@
 					line-height: 26px;
 				&__italic
 					font-style: italic;
-
-.post-wrap 
-	.post-title .post-title__wrap.title-date .date
