@@ -1,13 +1,20 @@
+//=font_my($name,$name_url)
+	//@font-face
+		//font-family: $name
+		//src: url(../fonts/#{$name_url}.ttf)
+		//src: url(../fonts/#{$name_url}.woff)
+		//src: url(../fonts/#{$name_url}.woff2)
+
 =font_my($name,$name_url)
 	@font-face
 		font-family: $name
 		src: url(../fonts/#{$name_url}.ttf)
-		src: url(../fonts/#{$name_url}.woff)
-		src: url(../fonts/#{$name_url}.woff2)
+
 
 +font_my(open-sans-semi-bold,opensanssemibold)
 +font_my(open-sans-extra-bold,opensansextrabold)
 +font_my(Uni-Sans-Heavy-Italic,Uni Sans Heavy Italic)
++font_my(TimesNewRomanPS-Bold,TimesNewRomanPS-Bold)	
 *
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -36,6 +43,7 @@ body
 @import _news
 @import _game
 @import _video
+@import _article
 @import _footer
 
 .link-st
@@ -85,6 +93,10 @@ body
 .w580
 	width: 580px
 	max-width: 580px
+.w910
+	width: 66%!important
+	max-width: 66%
+	margin-left: 31px
 .h50
 	height: 50%!important;
 .h53
@@ -118,6 +130,19 @@ body
 		background-color: #323232
 .none
 	display: none!important
+.color
+	&-blue
+		background: #2d95bf
+	&-yellow
+		background: #f2ca5b
+	&-green
+		background: #2e8a7d
+	&-black
+		background: #000000
+	&-greenb
+		background: #03554f
+	&-red
+		background: #ff4c36
 
 @import _media
 

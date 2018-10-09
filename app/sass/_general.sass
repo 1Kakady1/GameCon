@@ -1,7 +1,7 @@
-.news, .game, .video
+.news, .game, .video, .article
 	margin-left: 110px
 	margin-right: 110px	
-	.news-headr, .game-headr, .video-headr
+	.news-headr, .game-headr, .video-headr, .article-headr
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -10,7 +10,7 @@
 		justify-content: space-between
 		flex-flow: row nowrap;
 		border-bottom: 5px solid #f7f7f7
-		.news-headr__title, .game-headr__title, .video-headr__title
+		.news-headr__title, .game-headr__title, .video-headr__title, .article-headr__title
 			display: -webkit-flex
 			display: -moz-flex
 			display: -ms-flex
@@ -48,7 +48,7 @@
 		border-bottom: none!important
 		padding-top: 52px
 		padding-bottom: 68px
-	.game-slider, .video-slider 
+	.game-slider, .video-slider
 		display: flex;
 		align-items: center;
 		width: 65%;
@@ -75,3 +75,32 @@
 				width: 50%
 				display: flex;
 				flex-flow: row nowrap;
+
+.game .game-post, .article .article-post 
+	.post
+		&-comments
+			&__view, &__com
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center;
+				.icon
+					width: 12px;
+					height: 12px;
+					margin-left: 6px
+				.count
+					font-family: 'Nunito', sans-serif;
+					font-size: 14px;
+					font-weight: 400;
+					text-transform: uppercase;
+			&__view
+				.icon
+					background: url("../img/rocket.png")
+					background-repeat: no-repeat
+			&__com
+				margin-left: 24px
+				.icon
+					background: url("../img/comment.png")
+					background-repeat: no-repeat

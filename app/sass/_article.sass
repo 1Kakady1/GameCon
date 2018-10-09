@@ -1,0 +1,153 @@
+.article
+	margin-top: 30px
+	&-headr
+		border-bottom: none!important
+		&__title
+			a
+				color: #bf2d2d
+				border-bottom: 1px dashed #bf2d2d;
+		&__list
+			.btn-add
+				width: 210px;
+				height: 40px;
+				background: #2d95bf;
+				color: #ffffff
+				font-family: "Open Sans", sans-serif;
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 24px;
+				border: none
+					radius: 72px
+				text-align: center
+	&-post
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-flow: row wrap
+		margin-top: 30px
+		width: 100%
+		height: auto
+		.w910
+			.w910-wrap
+				width: 79%;
+				display: inline-block;
+			.post-pr
+				width: 100%
+				height: 430px
+				padding-top: 15px;
+				margin-right: 62px;
+				display: inline-block;
+				img
+					width: 100%
+					height: 100%
+			a
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+		.post
+			&-wrap
+				width: 32%;
+				height: 460px;
+				border: 2px solid #f2f2ef;
+				margin-bottom: 14px
+				&__left
+					margin-left: 31px
+				a
+					width: 100%
+					height: 100%
+				h1,p, .date, .month, .count
+					color: #000000;
+			&-title
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				padding-top: 15px;
+				&__wrap
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					overflow: hidden
+					flex-flow: row nowrap
+					position: relative;
+					right: 16px;
+					.title
+						&-date
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							justify-content: center;
+							text-align: center
+							.date, .month
+								color: #ffffff;
+								font-family: "Open Sans", sans-serif;
+								line-height: 24px;
+							.date
+								font-size: 35px;
+								font-weight: 700;
+							.month
+								font-size: 15px;
+								font-weight: 400;
+						&-img
+							img
+								width: 100%
+								height: 100%
+						&-img, &-date
+							width: 70px;
+							height: 70px;
+			&-comments
+				width: 280px;
+				height: 69px;
+				background: #f2f2ef;
+				border-top: 1px solid #b6b6b6
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				flex-direction: column
+				padding-left: 19px;
+				h1
+					margin: 12px 0 0 0;
+					width: 240px
+					height: 166px
+					overflow: hidden
+					color: #2d95bf;
+					font-family: "Open Sans", sans-serif;
+					font-size: 20px;
+					font-weight: 700;
+					line-height: 24px;
+					text-transform: uppercase;
+				.post-wrap
+					width: 100%
+					height: 100%
+					display: flex;
+					flex-flow: row nowrap;
+			&-content
+				h1
+					color: #000000;
+					font-family: "TimesNewRomanPS-Bold";
+					font-size: 30px;
+					font-weight: 400;
+					line-height: 30px;
+					letter-spacing: 0.6px;
+					padding: 0 40px 0 29px;
+				p
+					padding: 0 40px 0 29px;
+					color: #2d2d2d;
+					font-family: "Open Sans", sans-serif;
+					font-size: 17px;
+					font-weight: 400;
+					line-height: 26px;
+				&__italic
+					font-style: italic;
+
+.post-wrap 
+	.post-title .post-title__wrap.title-date .date
