@@ -1,7 +1,7 @@
-.news, .game
+.news, .game, .video
 	margin-left: 110px
 	margin-right: 110px	
-	.news-headr, .game-headr
+	.news-headr, .game-headr, .video-headr
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -10,7 +10,7 @@
 		justify-content: space-between
 		flex-flow: row nowrap;
 		border-bottom: 5px solid #f7f7f7
-		.news-headr__title, .game-headr__title
+		.news-headr__title, .game-headr__title, .video-headr__title
 			display: -webkit-flex
 			display: -moz-flex
 			display: -ms-flex
@@ -26,7 +26,7 @@
 				font-weight: 400;
 				line-height: 24px;
 				margin: 0 0 0 38px;
-.game
+.game, .video
 	margin-left: 0
 	margin-right: 0
 	display: -webkit-flex
@@ -35,20 +35,20 @@
 	display: -o-flex
 	display: flex
 	flex-flow: row nowrap
-	.game-left-bg
+	.game-left-bg, .video-left-bg
 		height: 100%;
 		width: 5%;
 		background-size: 100% 100%;
 		background-repeat: no-repeat;	
-	.game-wrap
+	.game-wrap, .video-wrap
 		width: 95%
 		padding-left: 38px
 		padding-right: 110px
-	.game-headr
+	.game-headr, .video-headr
 		border-bottom: none!important
 		padding-top: 52px
 		padding-bottom: 68px
-	.game-slider 
+	.game-slider, .video-slider 
 		display: flex;
 		align-items: center;
 		width: 65%;
@@ -63,8 +63,7 @@
 				fill:  #ffffff
 		&__dot
 			margin-left: 9vw;
-	.game-post
-		background: #ffffff
+	.game-post, .video-post
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex

@@ -1,0 +1,134 @@
+.video
+	height: 890px;
+	margin-top: -29px;
+	&-left-bg
+		background: url("../img/recb.png")	
+	&-wrap
+		background: #eae7d6;
+		height: 864px;
+	&-headr
+		&__title
+			& > h1
+				color: #241b1b;
+	&-slider 
+		&__btn .prev-btn, &__btn .next-btn
+			background: #323232;
+			&:hover
+				background: #30b5d8;	
+			svg
+				width: 100%
+				height: 100%
+				fill:  #ffffff
+		&__dot
+			.dot
+				background-color: #c2c2c2;
+				border: 1px solid #c2c2c2
+			.dot-active
+				background-color: #323232
+	&-post
+		.post
+			&-content
+				padding-left: 24px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 340px;
+				height: 100%;
+			&-wrap
+				background: #ffffff
+				width: 48%!important
+				margin-bottom: 27px;
+				&:nth-child(2n)
+					margin-left: 4%
+				a
+					width: 100%
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					flex-flow: row nowrap
+					background: rgba(149, 91, 165, 0)
+					transition-duration: 2s;
+					transition-property: background;
+					&:hover
+						background: rgba(149, 91, 165, 0.75);
+						transition-duration: 2s;
+						transition-property: background;
+						img, iframe
+							opacity: 0.1;
+							-moz-transition: all 200ms linear;
+							-ms-transition: all 200ms linear;
+							-o-transition: all 200ms linear;
+							-webkit-transition: all 200ms linear;
+							transition: all 200ms linear;
+						.play 
+							background: #f7d54a
+							-moz-transition: all 200ms linear;
+							-ms-transition: all 200ms linear;
+							-o-transition: all 200ms linear;
+							-webkit-transition: all 200ms linear;
+							transition: all 200ms linear;
+						p
+							color: #ffffff
+							-moz-transition: all 200ms linear;
+							-ms-transition: all 200ms linear;
+							-o-transition: all 200ms linear;
+							-webkit-transition: all 200ms linear;
+							transition: all 200ms linear;
+					h1
+						color: #000000;
+						font-family: 'Nunito', sans-serif;
+						font-size: 20px;
+						font-weight: 900;
+						line-height: 30px;
+						overflow: hidden;
+						height: 36%;
+					p
+						color: #b4b4b4;
+						font-family: "Open Sans", sans-serif;
+						font-size: 16px;
+						font-weight: 400;
+						line-height: 30px;
+						-moz-transition: all 200ms linear;
+						-ms-transition: all 200ms linear;
+						-o-transition: all 200ms linear;
+						-webkit-transition: all 200ms linear;
+						transition: all 200ms linear;
+
+			&-img
+				width: 330px;
+				height: 190px;
+				position: relative
+				border-left: 10px solid #343434;
+				img, iframe
+					width: 100%
+					height: 100%
+					-moz-transition: all 200ms linear;
+					-ms-transition: all 200ms linear;
+					-o-transition: all 200ms linear;
+					-webkit-transition: all 200ms linear;
+					transition: all 200ms linear;
+				.play
+					width: 70px
+					height: 70px
+					background: #ff4c36
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					align-items: center
+					justify-content: center
+					position: absolute
+					top: 0
+					left: -10px
+					-moz-transition: all 200ms linear;
+					-ms-transition: all 200ms linear;
+					-o-transition: all 200ms linear;
+					-webkit-transition: all 200ms linear;
+					transition: all 200ms linear;
+					svg
+						fill: #fff
+						width: 27px
+						height: 32px
