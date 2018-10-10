@@ -8,6 +8,7 @@
     <meta name="ProgId" content="FrontPage.Editor.Document">
     <link rel="shortcut icon" href="./icon.ico">
     <link rel="stylesheet" href="./css/flex.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
@@ -38,8 +39,8 @@
             </li>
             <li class="menu-items"> <a class="menu-link" href="#">Видео</a></li>
             <li class="menu-items"> <a class="menu-link" href="#">Еще</a></li>
-            <li class="menu-items search">
-              <div class="search-wrap"><i></i></div>
+            <li class="menu-items">
+              <button class="search-btn" type="submit"><i class="fas fa-search fa-2x"></i></button>
             </li>
           </ul>
         </div>
@@ -67,6 +68,10 @@
           </div>
           <div class="content-preview"><img src="./img/Preview.png" alt="Preview"></div>
         </div>
+      </div>
+      <div class="search animated slideInRight">
+        <h1>Поиск по странице</h1>
+        <input class="search-text form-control" type="text" name="search">
       </div>
     </div>
     <div class="sort">
@@ -757,7 +762,8 @@
       </div>
     </div>
     <footer></footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="./js/libs.min.js" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/search.js"></script>
   </body>
 </html>

@@ -31,7 +31,8 @@ header
 				display: -o-flex
 				display: flex
 				flex-flow: row nowrap;
-				padding-left: 20px 
+				padding-left: 20px
+				align-items: center 
 		&-items
 			list-style: none
 			padding-left: 39px
@@ -43,6 +44,23 @@ header
 			font-size: 20px;
 			font-weight: 300;
 			letter-spacing: 1px;
+			.search-btn
+				width: 50px
+				height: 50px
+				border: none
+				background: #ededed
+				-moz-transform: rotate(0deg);
+				-ms-transform: rotate(0deg);
+				-webkit-transform: rotate(0deg);
+				-o-transform: rotate(0deg);
+				transform: rotate(0deg);
+				&:hover
+					-moz-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+					-o-transform: rotate(45deg);
+					transform: rotate(45deg);
+
 			.fa-angle-down
 				-moz-transition: all 200ms linear;
 				-ms-transition: all 200ms linear;

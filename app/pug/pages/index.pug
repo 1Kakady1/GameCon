@@ -1,4 +1,3 @@
-include _mixin.pug
 doctype html
 html(lang="ru-Ru")
 	head
@@ -9,6 +8,7 @@ html(lang="ru-Ru")
 		meta(name="ProgId", content="FrontPage.Editor.Document")
 		link(rel="shortcut icon", href="./icon.ico")
 		link(rel='stylesheet', href='./css/flex.css')
+		link(rel='stylesheet', href='./css/animate.min.css')
 		link(rel='stylesheet', href='./css/main.css')
 		link( rel="stylesheet", href="https://use.fontawesome.com/releases/v5.2.0/css/all.css", integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ", crossorigin="anonymous")
 		link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
@@ -23,8 +23,9 @@ html(lang="ru-Ru")
 		include ./include/article
 		include ../layout/footer.pug
 
-		script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", crossorigin="anonymous")
+		script(src="./js/libs.min.js", crossorigin="anonymous")
 		script(src="./js/main.js")
+		script(src="./js/search.js")
 
 
 		
