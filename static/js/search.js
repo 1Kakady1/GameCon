@@ -45,9 +45,6 @@ let searchForm = document.getElementsByName('search'),
 	arrow = document.getElementsByClassName('arrow')[0],
 	body = document.getElementsByTagName('body')[0].childNodes;
 
-	
-
-	console.log(body);
 
 	// input для поиска
 	searchForm[0].addEventListener(searchForEvent, function(event){
