@@ -101,11 +101,19 @@ bufTargetDot = 0;
       let dotsAllBlock = objDotSlider[key],
       indClassNone = 1,
       index = n;
-      console.log("---------------");
-      console.log(n);
-      console.log(index);
-      console.log(objIndex[key]);
-      console.log("---------------");
+
+      function timerAddClass(classNameIn,classNameOut){
+            setTimeout(function(){
+              sliderExchangeClass(objBlockSlider[key][index - 1],classNameIn, "none");
+            }, 701);
+
+            sliderExchangeClass(objBlockSlider[key][indClassNone],classNameOut, "none");
+
+            setTimeout(function(){
+              sliderExchangeClass(objBlockSlider[key][indClassNone],"none", classNameOut);
+            }, 700);
+      }
+      
       if(n > objBlockSlider[key].length){
         index = 1;
       };
@@ -116,10 +124,8 @@ bufTargetDot = 0;
 
       for(let i=0; i < objBlockSlider[key].length;i++){
         objBlockSlider[key][i].classList.add('none');
-        objBlockSlider[key][i].classList.remove('slideInDown');
-        objBlockSlider[key][i].classList.remove('slideOutUp');
-        objBlockSlider[key][i].classList.remove('slideOutRight');
-        objBlockSlider[key][i].classList.remove('slideInRight');
+        objBlockSlider[key][i].classList.remove('slideInDown', 'slideOutUp', 'slideOutRight', 'slideOutRight', 'slideInRight');
+
         if(index-2 == i){
             indClassNone = i;
         }
@@ -130,36 +136,18 @@ bufTargetDot = 0;
           dotsAllBlock[i].classList.remove('dot_active');
       };
 
-      if(index > objIndex[key]  && index-1 != objBlockSlider[key].length){
-            setTimeout(function(){
-              sliderExchangeClass(objBlockSlider[key][index - 1],"slideInDown", "none");
-            }, 800);
+      if((index > objIndex[key]  && index-1 != objBlockSlider[key].length) 
+            || n-1 == objBlockSlider[key].length){
 
-            sliderExchangeClass(objBlockSlider[key][indClassNone],"slideOutRight", "none");
+        timerAddClass("slideInDown","slideOutRight");
+      }
 
-            setTimeout(function(){
-              sliderExchangeClass(objBlockSlider[key][indClassNone],"none", "slideOutRight");
-            }, 700);
-      }  else { console.log('1')}
+      if((index <= objIndex[key] && n-1 != objBlockSlider[key].length) 
+          || n < 1 ){
 
-      if((index <= objIndex[key]) || n < 1 ){
-        setTimeout(function(){
-              sliderExchangeClass(objBlockSlider[key][index - 1],"slideInRight", "none");
-                  }, 700)    
+        timerAddClass("slideInRight","slideOutUp");
+      }
 
-        sliderExchangeClass(objBlockSlider[key][indClassNone],"slideOutUp", "none");
-
-      setTimeout(function(){
-        sliderExchangeClass(objBlockSlider[key][indClassNone],"none", "slideOutUp");
-      }, 800);
-      } else { console.log('2')}
-
-      
-      //sliderExchangeClass(objBlockSlider[key][indClassNone],"none", "slideOutRight");
-      //objBlockSlider[key][index - 1].classList.remove('slideInDown');
-      //for(let i=0; i < objBlockSlider[key].length;i++){
-     //   objBlockSlider[key][i].classList.remove('none');
-    //  }
       dotsAllBlock[index - 1].classList.add('dot_active');
 
      return index;
