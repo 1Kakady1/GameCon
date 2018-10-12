@@ -1,0 +1,99 @@
+footer
+	height: 507px
+	width: 100%
+	padding-top: 66px
+	position: relative
+	overflow: hidden
+	&::before
+		content: ""
+		background: url("../img/Layer_24.png")
+		width: 651px;
+		height: 500px;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		position: absolute
+		top: 8px;
+		left: 41.11vw
+		z-index: 3;
+	&::after
+		content: ""
+		background: url("../img/footer-bottom.png")
+		height: 190px;
+		width: 100%;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		position: absolute
+		bottom: -136px;
+		z-index: 4;
+	.footer
+		&-wrap
+			height: 440px
+			width: 100%
+			&_bg
+				padding-left: 120px
+				padding-right: 120px
+				background: #ebebeb
+			.column
+				display: flex;
+				flex-flow: row wrap;
+				&-left
+					width: 740px;
+					height: 270px;
+					background: #33282c;
+					border-top: 10px solid #f7d54a
+					.content
+						position: relative
+						.svg-wrap
+							width: 60px
+							height: 60px
+							background: #f7d54a
+							position: absolute
+							display: -webkit-flex
+							display: -moz-flex
+							display: -ms-flex
+							display: -o-flex
+							display: flex
+							align-items: center
+							justify-content: center
+							top: -10px;
+							left: -20px;
+							svg
+								width: 70%
+								height: 70%
+						.icons-social
+							padding-left: 50px
+							display: flex;
+							flex-flow: row wrap;
+							a
+								width: 42px;
+								height: 38px;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								margin-left: 8px
+								margin-top: 12px
+								&:hover
+									background: #f7d54a
+									-o-transform: rotate3d(2, 1, 0, 180deg);
+									-ms-transform: rotate3d(2, 1, 0, 180deg);
+									-moz-transform: rotate3d(2, 1, 0, 180deg);
+									-webkit-transform: rotate3d(2, 1, 0, 180deg);
+									transform: rotate3d(0, 1, 0, 180deg);
+									i
+										color: #000
+										-o-transform: rotate3d(2, 1, 0, 180deg);
+										-ms-transform: rotate3d(2, 1, 0, 180deg);
+										-moz-transform: rotate3d(2, 1, 0, 180deg);
+										-webkit-transform: rotate3d(2, 1, 0, 180deg);
+										transform: rotate3d(0, 1, 0, 180deg);
+							.link_
+								&bg-blue
+									background: #3b5998;
+								&bg-opblue
+									background: #00acee;
+								&bg-pink
+									background: #ea4c89;
+								&bg-red
+									background: #db4a39;
+								&bg-green
+									background: #598728;
