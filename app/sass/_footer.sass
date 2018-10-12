@@ -13,7 +13,7 @@ footer
 		background-repeat: no-repeat;
 		position: absolute
 		top: 8px;
-		left: 41.11vw
+		left: 643px;
 		z-index: 3;
 	&::after
 		content: ""
@@ -145,6 +145,15 @@ footer
 								&bg-green
 									background: #598728;
 				&-right
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					margin-top: 40px;
+					flex-direction: column;
+					align-items: flex-end;
+					width: 45%;
 					.copyright
 						width: 321px;
 						height: 88px;
@@ -153,6 +162,7 @@ footer
 						font-size: 15px;
 						line-height: 24px;
 						overflow: hidden
+						margin-top: 141px;
 					.age-limit
 						color: #000000;
 						font-family: "Open Sans", sans-serif;
@@ -169,3 +179,11 @@ footer
 						display: flex
 						justify-content: center
 						align-items: center
+					.discl
+						margin-top: 42px;
+						img
+							width: 88px;
+							height: 31px;
+							opacity: 0.5;
+							&:nth-child(1)
+								margin-right: 20px
