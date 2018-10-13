@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", function(){
 	"use strict";
-/*
+
 let linkVideo = document.getElementsByClassName("playvideo"),
 	videoPlay = document.getElementsByClassName("video-play"),
 	myRe = new RegExp(/autoplay=1|&/gi);
@@ -24,7 +24,7 @@ for (let i = 0; i < linkVideo.length; i++) {
 
 	
 }
-*/
+
 
 var wow = new WOW(
   {
