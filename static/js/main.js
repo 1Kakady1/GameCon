@@ -97,4 +97,55 @@ btnSearch.addEventListener("click", function(){
 
 })
 
+  let toggles = document.querySelectorAll(".cmn-toggle-switch"),
+  	  menuLeft = document.getElementsByClassName("menu-start__left")[0],
+  	  menuRight = document.getElementsByClassName("menu-end")[0],
+  	  header = document.getElementsByTagName("header")[0];
+
+  for (let i = toggles.length - 1; i >= 0; i--) {
+    let toggle = toggles[i];
+    toggleHandler(toggle);
+  };
+
+  function toggleHandler(toggle) {
+    toggle.addEventListener( "click", function(e) {
+      e.preventDefault();
+      	//$('.menu-end').slideToggle("down");
+		//$('.menu-start__left').slideToggle("down");
+      if(this.classList.contains("active") !== true){
+
+		    this.classList.add("active");
+		    header.style.flexFlow="column";
+		    $('.menu-end').slideDown(500,"linear",function(){
+		    	$(this).css({
+			      display: "flex"
+			    })
+		    });
+			$('.menu-start__left').slideDown(500,"linear", function(){
+				$(this).css({
+			      display: "flex"
+			    })
+			});
+      }else {
+      	this.classList.remove("active");
+
+		$('.menu-end').slideUp(500,"linear",function(){
+				$(this).css({
+			      display: "none"
+			    })
+		});
+		$('.menu-start__left').slideUp(500,"linear",function(){
+				$(this).css({
+			      display: "none"
+			    })
+		});
+		setTimeout(function(){
+			header.removeAttribute("style");
+		}, 500)
+		
+      } 
+
+    });
+  }
+
 });
