@@ -127,8 +127,6 @@ btnSearch.addEventListener("click", function(){
   function toggleHandler(toggle) {
     toggle.addEventListener( "click", function(e) {
       e.preventDefault();
-      	//$('.menu-end').slideToggle("down");
-		//$('.menu-start__left').slideToggle("down");
       if(this.classList.contains("active") !== true){
 
 		    this.classList.add("active");
@@ -164,4 +162,11 @@ btnSearch.addEventListener("click", function(){
 
     });
   }
+
+  $('.parallax-window').parallax({
+  	imageSrc: '/img/Layer_39.png',
+  	bleed: 10,
+  	speed: 0.2
+  });
+
 });
