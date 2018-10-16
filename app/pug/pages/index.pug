@@ -16,19 +16,19 @@ html(lang="ru-Ru")
 		link(href="https://fonts.googleapis.com/css?family=Nunito", rel="stylesheet")
 	body
 		include ../layout/header.pug
+		include ./include/forms
 		include ./include/slider
 		include ./include/news
 		include ./include/game
 		include ./include/video
 		include ./include/article
-		
+		include ../layout/footer.pug
 
 		script(src="./js/libs.min.js")
 		script(src="./js/main.js")
 		script(src="./js/search.js")
 		script(src="./js/slider.js")
+		script(src="./js/send-msg.js")
 		script(src="./js/parallax.min.js")
-		
-		include ../layout/footer.pug
 
 		

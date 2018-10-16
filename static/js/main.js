@@ -164,8 +164,8 @@ btnSearch.addEventListener("click", function(){
   }
 
   $('.parallax-window').parallax({
-  	imageSrc: '/img/Layer_39.png',
-  	bleed: 10,
+  	imageSrc: './img/Layer_39.png',
+  	bleed: 0,
   	speed: 0.2
   });
 

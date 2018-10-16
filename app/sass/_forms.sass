@@ -1,0 +1,193 @@
+.modal, .modal-ajax
+	align-items: center
+	margin-top: 0;
+	margin-bottom: 0;
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	background: rgba(41, 171, 205, 0.8);
+	z-index: 9999999999
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	display: none;
+	width: 100%
+	height: 100%
+	.wrap-form
+		background: #f2ca5b
+		padding-bottom: 41px;
+		width: 50%;
+		border-radius: 26px;
+		position: absolute;
+		top: 20%;
+		left: 23%;
+		z-index: 5
+		padding-right: 50px;
+		padding-left: 50px;
+		padding-top: 20px;
+.modal
+	form
+		padding-top: 18px
+		position: relative
+	.contact-info
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between;
+			.rot-r
+				-moz-transform: rotate(20deg);
+				-ms-transform: rotate(20deg);
+				-webkit-transform: rotate(20deg);
+				-o-transform: rotate(20deg);
+				transform: rotate(20deg);
+				-moz-transition: all 300ms linear;
+				-ms-transition: all 300ms linear;
+				-o-transition: all 300ms linear;
+				-webkit-transition: all 300ms linear;
+				transition: all 300ms linear;
+			.rot-l
+				-moz-transform: rotate(-20deg);
+				-ms-transform: rotate(-20deg);
+				-webkit-transform: rotate(-20deg);
+				-o-transform: rotate(-20deg);
+				transform: rotate(-20deg);
+				-moz-transition: all 300ms linear;
+				-ms-transition: all 300ms linear;
+				-o-transition: all 300ms linear;
+				-webkit-transition: all 300ms linear;
+				transition: all 300ms linear;
+			.logo-inf
+				width: 23%;
+				height: 100%;
+				margin-top: 21px;
+				img
+					width: 100%
+					height: 100%
+
+	.wrap-form	
+		label, p
+			font-family: "TruenoLt";
+		.tel > p 
+			padding-left: 16px;
+		#error-msg
+			span
+				position: absolute;
+				z-index: 6;
+				top: 288px;
+				left: 161px;
+				display: flex;
+			.btn-load
+				background: url(../img/ajax-loader-btn.gif) no-repeat;
+				background-size: cover;
+				height: 1rem;
+				width: 1rem;
+				position: absolute;
+				z-index: 6;
+				top: 296px;
+				left: 133px;
+				display: block;
+		.use-info
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column;
+			justify-content: space-between;
+		.form-control
+			display: block;
+			width: 100%;
+			margin-bottom: 11px;
+			height: calc(2.25rem + 2px);
+			padding: .375rem .75rem;
+			font-size: 1rem;
+			line-height: 1.5;
+			color: #495057;
+			background-color: #fff;
+			background-clip: padding-box;
+			border: 1px solid #ced4da;
+			border-radius: .25rem;
+			transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+			&:focus 
+				color: #495057;
+				background-color: #fff;
+				border-color: #80bdff;
+				outline: 0;
+				box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+		.btn
+			display: inline-block;
+			font-weight: 400;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			-webkit-user-select: none;
+			color: #fff;
+			background: rgb(41, 171, 205);
+			border-color: rgb(41, 171, 205);
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			border: 1px solid transparent;
+			padding: .375rem .75rem;
+			font-size: 1rem;
+			line-height: 1.5;
+			border-radius: .25rem;
+			margin-top: 36px;
+			&:hover
+				transform: scale(1.2);
+		.txt
+			display: block;
+			width: 100%;
+			height: auto;
+			padding: 6px 12px;
+			font-size: 14px;
+			line-height: 1.42857143;
+			color: #555;
+			background-color: #fff;
+			background-image: none;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+			-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+			-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+			transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+form
+	.container
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+	.column-left,.column-right
+		width: 50%
+	.column-right
+		padding-left: 25px;
+.close:not(:disabled):not(.disabled)
+	cursor: pointer;
+.close
+	position: absolute;
+	right: 2px;
+	top: 1px;
+	cursor: pointer;
+	font-size: 35px;
+	color: #fff;
+	font-weight: 300;
+	background: #464245;
+	border-radius: 25px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: right;
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1;
+	text-shadow: 0 1px 0 #fff;
+	opacity: .5;
+
