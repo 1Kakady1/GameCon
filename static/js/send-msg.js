@@ -23,7 +23,6 @@ close[0].addEventListener('click', function(){
 	    if (container.has(e.target).length === 0){
 	        document.body.style.overflow = '';
 	        container.hide("slow"); 
-	        clearInterval(timerId);
 	    }
 	});
 

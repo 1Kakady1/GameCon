@@ -1,4 +1,4 @@
-.modal, .modal-ajax
+.modal, .modal-ajax, .modal-in_reg
 	align-items: center
 	margin-top: 0;
 	margin-bottom: 0;
@@ -25,7 +25,7 @@
 		padding-right: 50px;
 		padding-left: 50px;
 		padding-top: 20px;
-.modal
+.modal, .modal-in_reg
 	form
 		padding-top: 18px
 		position: relative
@@ -68,7 +68,7 @@
 
 	.wrap-form	
 		label, p
-			font-family: "TruenoLt";
+			font-family: 'Open Sans', sans-serif;
 		.tel > p 
 			padding-left: 16px;
 		#error-msg
@@ -136,7 +136,12 @@
 			border-radius: .25rem;
 			margin-top: 36px;
 			&:hover
-				transform: scale(1.2);
+				background: #fff;
+				color: rgb(41, 171, 205);
+		#tab-reg, #tab-log
+			width: 40%
+		.tab-btn
+			width: 60%
 		.txt
 			display: block;
 			width: 100%;
@@ -161,8 +166,50 @@ form
 		display: -ms-flex
 		display: -o-flex
 		display: flex
+	.container_column
+		flex-direction: column;
+	.icons-social
+		padding-left: 50px
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center
+		a
+			width: 42px;
+			height: 38px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: 8px
+			margin-top: 12px
+			&:hover
+				background: #29abcd
+				-o-transform: rotate3d(2, 1, 0, 180deg);
+				-ms-transform: rotate3d(2, 1, 0, 180deg);
+				-moz-transform: rotate3d(2, 1, 0, 180deg);
+				-webkit-transform: rotate3d(2, 1, 0, 180deg);
+				transform: rotate3d(0, 1, 0, 180deg);
+				i
+					color: #000
+					-o-transform: rotate3d(2, 1, 0, 180deg);
+					-ms-transform: rotate3d(2, 1, 0, 180deg);
+					-moz-transform: rotate3d(2, 1, 0, 180deg);
+					-webkit-transform: rotate3d(2, 1, 0, 180deg);
+					transform: rotate3d(0, 1, 0, 180deg);
+		.link_
+			&bg-blue
+				background: #3b5998;
+			&bg-opblue
+				background: #00acee;
+			&bg-pink
+				background: #ea4c89;
+			&bg-red
+				background: #db4a39;
+			&bg-green
+				background: #598728;	
 	.column-left,.column-right
 		width: 50%
+	.column-left_w100
+		width: 100%!important
 	.column-right
 		padding-left: 25px;
 .close:not(:disabled):not(.disabled)
@@ -190,4 +237,5 @@ form
 	line-height: 1;
 	text-shadow: 0 1px 0 #fff;
 	opacity: .5;
+
 

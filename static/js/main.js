@@ -169,4 +169,63 @@ btnSearch.addEventListener("click", function(){
   	speed: 0.2
   });
 
+  let $btnTab = $('.tab-btn > button'),
+  	  $tab = $('.tab'),
+  	  $loginBtn=$('.login'),
+  	  $registerBtn =$('.register'),
+  	  $modalIn = $('.modal-in_reg'),
+  	  timerIdReg = '',
+  	  closeInReg = document.getElementsByClassName("close-in_reg");
+console.log(closeInReg);
+  	  showTab(0);
+
+	function showTab($n){
+
+		for (let $i = 0; $i< $tab.length; $i++ ) {
+			$($tab[$i]).hide("slow");	
+		}
+
+		$($tab[$n]).show("slow");
+	}
+
+	$($btnTab[0]).on('click', function(event) {
+		event.preventDefault();
+		document.body.style.overflow = 'hidden';
+	  	showTab(0);
+	});
+
+	$($btnTab[1]).on('click', function(event) {
+		event.preventDefault();
+		document.body.style.overflow = 'hidden';
+	  	showTab(1);
+	});
+
+	$($loginBtn[0]).on('click', function(event) {
+		event.preventDefault();
+		$($modalIn).css('display','flex');
+		document.body.style.overflow = 'hidden';
+	  	showTab(0);
+	});
+
+	$($registerBtn[0]).on('click', function(event) {
+		event.preventDefault();
+		$($modalIn).css('display','flex');
+		document.body.style.overflow = 'hidden';
+	  	showTab(1);
+	});
+
+ closeInReg[0].addEventListener('click', function(){
+    let container = $($modalIn);
+    container.hide("slow");
+    document.body.style.overflow = '';
+  });
+
+	$(document).mouseup(function (e) {
+	    let container = $($modalIn);
+	    if (container.has(e.target).length === 0){
+	        document.body.style.overflow = '';
+	        container.hide("slow"); 
+	    }
+	});
+
 });
