@@ -1,7 +1,9 @@
 <?php 
-	$to = htmlspecialchars("anton2017_96@mail.ru");
+	$to = htmlspecialchars("test@mail.ru");
 	$email = htmlspecialchars($_POST['email']);
-
+/*******************/
+        exit;
+/*******************/
 	$err = "";
 	    if(trim($_POST['name']) == "" && trim($_POST['email']) == ""
             && trim($_POST['msg']) == "" && trim($_POST['phone']) == "")

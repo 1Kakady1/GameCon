@@ -1,7 +1,7 @@
 doctype html
 html(lang="ru-Ru")
 	head
-		title='AM4'
+		title='Статьи'
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1" )
 		meta(name="GENERATOR", content="Microsoft FrontPage 4.0")
@@ -14,12 +14,186 @@ html(lang="ru-Ru")
 		link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet")
 		link(href="https://fonts.googleapis.com/css?family=Nunito", rel="stylesheet")
-	body
+	body(style="background: #fff;")
 		include ../layout/header.pug
+		-var title = "Ненавязчивый анализ Mirror’s Edge",content="Ещё совсем недавно осень считалась главным \nпоставщиком крупных игровых релизов. Полки\nмагазинов ломились от новинок, а от \nпокупателей не было отбоя. Доходило до того,\nчто к концу сезона кошельки походили на выпотрошенные туши.",img="Preview.png",pageParallax="article",onSort=0;
+		include ./include/slider
 		include ./include/forms
-		include ./include/game
-		include ../layout/footer.pug
+		.article
+			.article-headr
+				.article-headr__title
+					h1 СТАТЬИ
 
+			.article-post
+				.post-wrap.wow.bounceInLeft
+						a(href="#")
+							.post-title
+								.post-title__wrap
+									.title-date.color-blue
+										.date 02
+										.month март
+									.title-img
+										img(src="./img/p1.png", alt="post-1")
+								.post-comments
+									h1 709KG
+									.post-wrap__com
+										.post-comments__view 
+											.count 24
+											.icon
+										.post-comments__com
+											.count 23
+											.icon
+							.post-content
+								h1 Что не так с игровой индустрией?
+								p.post-content__italic Я давно порывался написать статью по поводу тенденций в сфере игр и по поводу качества нашей самой большой индустрии. 
+								p К 2015 году накопилось некое количество проблем в играх, о которых стоит поговорить. Интересен тот факт, что про эти проблемы знает практически каждый, но при этом никто ничего не делает...
+				.post-wrap.wow.bounceInRight.w910
+						a(href="#")
+								.w910-wrap
+									.post-title
+										.post-title__wrap
+											.title-date.color-yellow
+												.date 02
+												.month март
+											.title-img
+												img(src="./img/p2.png", alt="post-1")
+										.post-comments
+											h1 TheBeetlyOff
+											.post-wrap__com
+												.post-comments__view 
+													.count 24
+													.icon
+												.post-comments__com
+													.count 23
+													.icon
+									.post-content
+										h1 Днище морское: рецензия на Raven's Cry индустрией?
+										p.post-content__italic Если подумать, то по-настоящему отвратительных игр существует не так уж и много. 
+
+										p Но Raven’s Cry принадлежит к числу исключений. В ней нет практически ничего, чем разработчики могли бы гордиться.
+								.post-pr
+									img(src="./img/imgp.png", alt="prew")
+				.post-wrap.wow.bounceInLeft 
+						a(href="#")
+							.post-title
+								.post-title__wrap.color-green
+									.title-date
+										.date 02
+										.month март
+									.title-img
+										img(src="./img/p3.png", alt="post-1")
+								.post-comments
+									h1 RouleRull
+									.post-wrap__com
+										.post-comments__view 
+											.count 24
+											.icon
+										.post-comments__com
+											.count 23
+											.icon
+							.post-content
+								h1 Лучшее. Автомобильное. Порно.
+								p.post-content__italic О Project CARS, наверное, не слышал только ленивый. Впрочем, это и неудивительно.
+
+								p Slightly Mad Studios не просто полностью переложила задачу финансирования разработки на сообщество. Взамен студия дала своим почитателям полный доступ к игре с самого раннего этапа и возможность непосредственно влиять на ход разработки.
+				.post-wrap.wow.bounceInUp.post-wrap_left
+						a(href="#")
+							.post-title
+								.post-title__wrap
+									.title-date.color-black
+										.date 02
+										.month март
+									.title-img
+										img(src="./img/p4.png", alt="post-1")
+								.post-comments
+									h1 АндрейкаВайн
+									.post-wrap__com
+										.post-comments__view 
+											.count 24
+											.icon
+										.post-comments__com
+											.count 23
+											.icon
+							.post-content
+								h1 Совсем не аддон: рецензия на Total War: Attila
+								p.post-content__italic В некоторых моментах Total War: Attila далеко ушла от своей предшественницы, Rome 2.
+
+								p Эта игра ни в коем случае не дополнение, как может сперва показаться, а самостоятельный проект, действие которого разворачивается в совершенно другой эпохе.
+				.post-wrap.wow.bounceInRight.post-wrap_left
+						a(href="#")
+							.post-title
+								.post-title__wrap
+									.title-date.color-greenb
+										.date 02
+										.month март
+									.title-img
+										img(src="./img/p5.png", alt="post-1")
+								.post-comments
+									h1 Goldavad
+									.post-wrap__com
+										.post-comments__view 
+											.count 24
+											.icon
+										.post-comments__com
+											.count 23
+											.icon
+							.post-content
+								h1 Как продать одну игру дважды: рецензия на Cities XXL
+								p.post-content__italic В жанре градостроительного симулятора уже давным-давно заправляет одна «главная» серия — SimCity. 
+								
+								p Если вы знакомы с предыдущими частями Cities, то вам наверняка известно, что основную работу по развитию игры проделывает сообщество... внося/....необходимые изменения и расширяя существующий функционал
+				.post-wrap.wow.bounceInLeft 
+						a(href="#")
+							.post-title
+								.post-title__wrap.color-green
+									.title-date
+										.date 02
+										.month март
+									.title-img
+										img(src="./img/p3.png", alt="post-1")
+								.post-comments
+									h1 RouleRull
+									.post-wrap__com
+										.post-comments__view 
+											.count 24
+											.icon
+										.post-comments__com
+											.count 23
+											.icon
+							.post-content
+								h1 Лучшее. Автомобильное. Порно.
+								p.post-content__italic О Project CARS, наверное, не слышал только ленивый. Впрочем, это и неудивительно.
+
+								p Slightly Mad Studios не просто полностью переложила задачу финансирования разработки на сообщество. Взамен студия дала своим почитателям полный доступ к игре с самого раннего этапа и возможность непосредственно влиять на ход разработки.		
+				.post-wrap.wow.bounceInRight.w910
+						a(href="#")
+								.w910-wrap
+									.post-title
+										.post-title__wrap
+											.title-date.color-yellow
+												.date 02
+												.month март
+											.title-img
+												img(src="./img/p2.png", alt="post-1")
+										.post-comments
+											h1 TheBeetlyOff
+											.post-wrap__com
+												.post-comments__view 
+													.count 24
+													.icon
+												.post-comments__com
+													.count 23
+													.icon
+									.post-content
+										h1 Днище морское: рецензия на Raven's Cry индустрией?
+										p.post-content__italic Если подумать, то по-настоящему отвратительных игр существует не так уж и много. 
+
+										p Но Raven’s Cry принадлежит к числу исключений. В ней нет практически ничего, чем разработчики могли бы гордиться.
+								.post-pr
+									img(src="./img/imgp.png", alt="prew")
+		-var arrayUrl = ["404.html","404.html","404.html"]
+		include ./include/pagination		
+		include ../layout/footer.pug
 		script(src="./js/libs.min.js")
 		script(src="./js/main.js")
 		script(src="./js/search.js")

@@ -1,7 +1,7 @@
 doctype html
 html(lang="ru-Ru")
 	head
-		title='AM4'
+		title='Новости'
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1" )
 		meta(name="GENERATOR", content="Microsoft FrontPage 4.0")
@@ -14,12 +14,94 @@ html(lang="ru-Ru")
 		link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet")
 		link(href="https://fonts.googleapis.com/css?family=Nunito", rel="stylesheet")
-	body
+	body(style="background: #f2ca5b;")
 		include ../layout/header.pug
+		-var title = "Ненавязчивый анализ Mirror’s Edge",content="Ещё совсем недавно осень считалась главным \nпоставщиком крупных игровых релизов. Полки\nмагазинов ломились от новинок, а от \nпокупателей не было отбоя. Доходило до того,\nчто к концу сезона кошельки походили на выпотрошенные туши.",img="Preview.png",pageParallax="news",onSort=0;
+		include ./include/slider
 		include ./include/forms
-		include ./include/game
+		.news
+			.news-headr
+				.news-headr__title
+					h1 новости
+					a(href="./category-news.html" class="link-st") В начало
+				.news-headr__list
+					select#propertyType.select.form-control.input-lg(form='addProperty', name='propertyType')
+						option(value='0', selected) Все новости
+						option(value='1') Top
+						option(value='2') Новинки
+						option(value='3') В разработке
+			.news-post
+				.w50.h320.news-post__column
+					.post
+						a(href="#" class="link-hover__g")
+							.post-img
+								img(src="./img/Layer_45.png", alt="")
+								.post-shadow
+							.post-title
+								hr
+								p.rect Как инди-студия утерла нос Telltale
+				.w25.h320.news-post__column
+					.post
+						a(href="#" class="link-hover__p")
+							.post-img
+								img(src="./img/Layer_46.png", alt="")
+								.post-shadow
+							.post-title
+								hr
+								p Elite: Dangerous в Steam за 3000 р
+				.w25.h320.news-post__column
+					.post
+						a(href="#" class="link-hover__g")
+							.post-img
+								img(src="./img/Layer_47.png", alt="")
+								.post-shadow
+							.post-title
+								hr
+								p Русский трейлер ПК-версии GTA V
+				.w25.h650.news-post__column
+					.post
+						a(href="#" class="link-hover__p")
+							.post-img.h53
+								img(src="./img/Layer_50.png", alt="")
+								.post-shadow
+							.post-title.h50.post-title__bg
+								hr
+								h1
+									b Diablo 3 
+									| с видом от третьего лица
+								p Если вы когда-либо задавались вопросом, как бы выглядела Diablo 3 с видом от третьего лица, то вашим теоретическим изысканиям настал конец. 
+				.w25.h650.news-post__column
+					.post
+						a(href="#" class="link-hover__g")
+							.post-img
+								img(src="./img/Layer_51.png", alt="")
+								.post-shadow
+							.post-title
+								hr
+								p Карточный домик продлили до 4-го сезона!
+				.w50.h650.news-post__column
+					.post.h325
+						a(href="#" class="link-hover__p")
+							.post-img.w50
+								img(src="./img/Layer_48.png", alt="")
+								.post-shadow
+							.post-title.w50.post-title__bg
+								hr
+								h1 
+									b Гейб 
+									| - новый босс в Crawl
+								p Crawl —  онлайновый слэшер для ПК, в котором игроки по очереди играют за героя и всех монстров в лабиринте.
+					.post.h325
+						a(href="#" class="link-hover__g")
+							.post-img
+								img(src="./img/Layer_49.png", alt="")
+								.post-shadow
+							.post-title
+								hr
+								p Это то, зачем нужны игры: мы спасли 350 сирийских детей
+		-var arrayUrl = ["404.html","404.html","404.html"]
+		include ./include/pagination	
 		include ../layout/footer.pug
-
 		script(src="./js/libs.min.js")
 		script(src="./js/main.js")
 		script(src="./js/search.js")

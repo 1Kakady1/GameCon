@@ -1,7 +1,7 @@
 doctype html
 html(lang="ru-Ru")
 	head
-		title='AM4'
+		title='Видео'
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1" )
 		meta(name="GENERATOR", content="Microsoft FrontPage 4.0")
@@ -16,8 +16,126 @@ html(lang="ru-Ru")
 		link(href="https://fonts.googleapis.com/css?family=Nunito", rel="stylesheet")
 	body
 		include ../layout/header.pug
+		-var title = "Ненавязчивый анализ Mirror’s Edge",content="Ещё совсем недавно осень считалась главным \nпоставщиком крупных игровых релизов. Полки\nмагазинов ломились от новинок, а от \nпокупателей не было отбоя. Доходило до того,\nчто к концу сезона кошельки походили на выпотрошенные туши.",img="Preview.png",pageParallax="video",onSort=0;
+		include ./include/slider
 		include ./include/forms
-		include ./include/game
+		.video
+			div(class="video-left-bg", style="margin-bottom: -43px;")
+			.video-wrap
+				.video-headr
+					.video-headr__title
+						h1 Видео
+				.video-post.animated.slideInDown
+					.post-wrap
+						a(href="#", class="playvideo")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g6.png")
+							.post-content
+								h1 1Not A Hero. Геймплейный трейлер
+								p Жанр: Action, Pixel
+					.post-wrap
+						a(href="#" class="playvideo")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g6.png")
+							.post-content
+								h1 FRed Dead Redemption: Золото Сэта 
+								p Жанр: Action
+					.post-wrap
+						a(href="#")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g4.png")
+							.post-content
+								h1 Видеодайджест от AM4 Выпуск #211
+								p Жанр: Action, Pixel
+					.post-wrap
+						a(href="#")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g2.png")
+							.post-content
+								h1 The Order: 1886 - Новый трейлер
+								p Жанр: Action
+					.post-wrap
+						a(href="#")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g3.png")
+							.post-content
+								h1 FineSweeper. Демонстрация игрового процесса
+								p Жанр: Action, RPG
+					.post-wrap
+						a(href="#")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g5.png")
+							.post-content
+								h1 Топ 10 лучший сюжет в играх
+								p Жанр: Action
+					.post-wrap
+						a(href="#", class="playvideo")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g6.png")
+							.post-content
+								h1 1Not A Hero. Геймплейный трейлер
+								p Жанр: Action, Pixel
+					.post-wrap
+						a(href="#" class="playvideo")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g6.png")
+							.post-content
+								h1 FRed Dead Redemption: Золото Сэта 
+								p Жанр: Action
+					.post-wrap
+						a(href="#")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g4.png")
+							.post-content
+								h1 Видеодайджест от AM4 Выпуск #211
+								p Жанр: Action, Pixel
+					.post-wrap
+						a(href="#")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g2.png")
+							.post-content
+								h1 The Order: 1886 - Новый трейлер
+								p Жанр: Action
+					.post-wrap
+						a(href="#")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g3.png")
+							.post-content
+								h1 FineSweeper. Демонстрация игрового процесса
+								p Жанр: Action, RPG
+					.post-wrap
+						a(href="#")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g5.png")
+							.post-content
+								h1 Топ 10 лучший сюжет в играх
+								p Жанр: Action
+		-var arrayUrl = ["404.html","404.html","404.html"]
+		include ./include/pagination	
 		include ../layout/footer.pug
 
 		script(src="./js/libs.min.js")

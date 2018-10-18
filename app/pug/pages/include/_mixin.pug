@@ -21,3 +21,18 @@ mixin printBlockSlider(title,content,img,pageParallax,onSort)
 			button(type="submit" name="new" class="btn-tab active-btn") Популярные
 			button(type="submit" name="new" class="btn-tab") Новые
 		-}
+mixin printPagination(arrayUrl)
+	.paginatian
+		ul
+			-for(var x=0; x<arrayUrl.length; x++){
+			-if(x==0){
+			li.active
+				a(href=""+arrayUrl[x]) 1
+			-}
+			-else{
+			li 
+				a(href=""+arrayUrl[x])= x+1
+			-}
+			-}
+
+	

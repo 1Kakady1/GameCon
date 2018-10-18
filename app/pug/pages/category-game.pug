@@ -16,11 +16,11 @@ html(lang="ru-Ru")
 		link(href="https://fonts.googleapis.com/css?family=Nunito", rel="stylesheet")
 	body
 		include ../layout/header.pug
-		-var title = "Ненавязчивый анализ Mirror’s Edge",content="Ещё совсем недавно осень считалась главным \nпоставщиком крупных игровых релизов. Полки\nмагазинов ломились от новинок, а от \nпокупателей не было отбоя. Доходило до того,\nчто к концу сезона кошельки походили на выпотрошенные туши.",img="Preview.png",pageParallax="window",onSort=0;
+		-var title = "Ненавязчивый анализ Mirror’s Edge",content="Ещё совсем недавно осень считалась главным \nпоставщиком крупных игровых релизов. Полки\nмагазинов ломились от новинок, а от \nпокупателей не было отбоя. Доходило до того,\nчто к концу сезона кошельки походили на выпотрошенные туши.",img="Preview.png",pageParallax="game",onSort=0;
 		include ./include/slider
 		include ./include/forms
 		.game
-			.game-left-bg
+			div(class="game-left-bg", style="margin-bottom: -26px;")
 			.game-wrap
 				.game-headr
 					.game-headr__title
@@ -194,6 +194,8 @@ html(lang="ru-Ru")
 								.post-comments__com 
 									.count 23
 									.icon
+		-var arrayUrl = ["404.html","404.html","404.html"]
+		include ./include/pagination	
 		include ../layout/footer.pug
 
 		script(src="./js/libs.min.js")

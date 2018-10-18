@@ -1,4 +1,4 @@
-
+// проверка размера крана
   function windowSize(){
     if ($(window).width() <= '540'){
     	let url = "phone.html";
@@ -10,7 +10,7 @@
 
 window.addEventListener("DOMContentLoaded", function(){
 	"use strict";
-
+// видео вкл. при ховер(ifraim)
 let flagVideo = false;
 
 if(flagVideo == true){
@@ -40,9 +40,7 @@ if(flagVideo == true){
 	}
 }
 
-
-
-
+// lib wow
 var wow = new WOW(
   {
     boxClass:     'wow',      // animated element css class (default is wow)
@@ -59,7 +57,7 @@ var wow = new WOW(
 );
 wow.init();
 
-
+// форма поиска
 let btnSearch = document.getElementsByClassName("search-btn")[0],
 	clickFlag = 0,
 	blockSearch = document.getElementsByClassName("search")[0],
@@ -112,8 +110,9 @@ btnSearch.addEventListener("click", function(){
 	}
 
 
-})
+});
 
+// меню на 996px-360px
   let toggles = document.querySelectorAll(".cmn-toggle-switch"),
   	  menuLeft = document.getElementsByClassName("menu-start__left")[0],
   	  menuRight = document.getElementsByClassName("menu-end")[0],
@@ -163,11 +162,7 @@ btnSearch.addEventListener("click", function(){
     });
   }
 
-  $('.parallax-window').parallax({
-  	imageSrc: './img/Layer_39.png',
-  	bleed: 0,
-  	speed: 0.2
-  });
+  // форма регистрации
 
   let $btnTab = $('.tab-btn > button'),
   	  $tab = $('.tab'),
@@ -176,7 +171,7 @@ btnSearch.addEventListener("click", function(){
   	  $modalIn = $('.modal-in_reg'),
   	  timerIdReg = '',
   	  closeInReg = document.getElementsByClassName("close-in_reg");
-console.log(closeInReg);
+
   	  showTab(0);
 
 	function showTab($n){
@@ -227,5 +222,40 @@ console.log(closeInReg);
 	        container.hide("slow"); 
 	    }
 	});
+
+// параллах
+let $parallaxClass = $('.slider-img > div')[0].className,
+	$returnImgPr=0;
+	$parallaxClass= '.'+$parallaxClass;
+	function returnImg(a){
+		switch(a) {
+			case ".parallax-video":
+				return "video.png"
+				break;
+			case ".parallax-game":
+				return "game.png"
+				break;
+			case ".parallax-window":
+				return "Layer_39.png"
+				break;
+			case ".parallax-news":
+				return "news.png"
+				break;
+			case ".parallax-article":
+				return "article.png"
+				break;
+			default:
+				return "def.png"
+				break;
+		}
+	}
+
+$returnImgPr = returnImg($parallaxClass);
+
+$($parallaxClass).parallax({
+  	imageSrc: `./img/${$returnImgPr}`,
+  	bleed: 0,
+  	speed: 0.2
+  });
 
 });
