@@ -1,0 +1,46 @@
+doctype html
+html(lang="ru-Ru")
+	head
+		title='OST'
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1" )
+		meta(name="GENERATOR", content="Microsoft FrontPage 4.0")
+		meta(name="ProgId", content="FrontPage.Editor.Document")
+		link(rel="shortcut icon", href="./icon.ico")
+		link(rel='stylesheet', href='./css/flex.css')
+		link(rel='stylesheet', href='./css/animate.min.css')
+		link(rel='stylesheet', href='./css/main.css')
+		link( rel="stylesheet", href="https://use.fontawesome.com/releases/v5.2.0/css/all.css", integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ", crossorigin="anonymous")
+		link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Nunito", rel="stylesheet")
+	body
+		include ../layout/header.pug
+		-var title = "Ненавязчивый анализ Mirror’s Edge",content="Ещё совсем недавно осень считалась главным \nпоставщиком крупных игровых релизов. Полки\nмагазинов ломились от новинок, а от \nпокупателей не было отбоя. Доходило до того,\nчто к концу сезона кошельки походили на выпотрошенные туши.",img="Preview.png",pageParallax="audio",onSort=0;
+		include ./include/slider
+		include ./include/forms
+		.video
+			div(class="video-wrap", style="width: 100%;padding-left: 110px;padding-right: 110px;")
+				.video-headr
+					.video-headr__title
+						h1 OST
+				.video-post.animated.slideInDown
+					.post-wrap
+						a(href="#", class="playvideo")
+							.post-img
+								.play
+									include ../../img/svg/play-button.svg
+								img(src="./img/g6.png")
+							.post-content
+								h1 1Not A Hero. Геймплейный трейлер
+								p Жанр: Action, Pixel
+		-var arrayUrl = ["404.html","404.html","404.html"]
+		include ./include/pagination	
+		include ../layout/footer.pug
+
+		script(src="./js/libs.min.js")
+		script(src="./js/main.js")
+		script(src="./js/search.js")
+		script(src="./js/slider.js")
+		script(src="./js/send-msg.js")
+		script(src="./js/parallax.min.js")
