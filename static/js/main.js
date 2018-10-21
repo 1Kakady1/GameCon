@@ -243,6 +243,9 @@ let $parallaxClass = $('.slider-img > div')[0].className,
 			case ".parallax-article":
 				return "article.png"
 				break;
+			case ".parallax-audio":
+				return "def.png"
+				break;
 			default:
 				return "def.png"
 				break;
@@ -250,7 +253,7 @@ let $parallaxClass = $('.slider-img > div')[0].className,
 	}
 
 $returnImgPr = returnImg($parallaxClass);
-
+console.log($returnImgPr)
 $($parallaxClass).parallax({
   	imageSrc: `./img/${$returnImgPr}`,
   	bleed: 0,

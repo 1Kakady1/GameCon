@@ -35,7 +35,9 @@ function audioPalyer(){
 	});
 
 	$("#audioPalyer")[0].addEventListener("play", function(){
+		
 		$('.cover > img')[0].src = `./img/cover/${coverImg}`;
+	
 	});
 
 	function randCover(a){

@@ -1,5 +1,7 @@
 .audio
 	height: auto;
+	margin-top: 46px;
+	position: relative;
 	&-wrap
 		background: #2e8a7d;
 		height: auto;
@@ -20,7 +22,8 @@
 		background: #ffffff
 		.post
 			&-wrap
-				justify-content: center
+				justify-content: end
+				flex-direction: column!important
 			&-wrap__column
 				display: -webkit-flex
 				display: -moz-flex
@@ -61,7 +64,7 @@
 						flex-flow: row nowrap;
 						&:hover
 							background: antiquewhite;
-							border: none
+							border: 1px solid antiquewhite
 						i
 							margin-right: 20px;
 				a
@@ -78,7 +81,7 @@
 						color: red
 				.current-song
 					background: antiquewhite;
-					border: none
+					border: 1px solid antiquewhite
 			&-comments
 				display: -webkit-flex
 				display: -moz-flex
@@ -87,24 +90,15 @@
 				display: flex
 				align-items: center;
 			&-img
-				width: 230px;
-				height: 320px;
+				width: 86%;
+				height: 50%;
+				display: flex;
+				justify-content: center;
+				margin-top: 16px;
 				img
 					border-bottom: 5px solid #f80995;
 					height: 100%;
 					width: inherit;
-					-moz-transition: all 200ms linear;
-					-ms-transition: all 200ms linear;
-					-o-transition: all 200ms linear;
-					-webkit-transition: all 200ms linear;
-					transition: all 200ms linear;
-					&:hover
-						transform: scale(0.8);
-						-moz-transition: all 200ms linear;
-						-ms-transition: all 200ms linear;
-						-o-transition: all 200ms linear;
-						-webkit-transition: all 200ms linear;
-						transition: all 200ms linear;
 			&-content
 				padding-left: 21px;
 				padding-right: 20px
@@ -115,7 +109,6 @@
 					font-weight: 300;
 					line-height: 24px;
 					height: 150px;
-					overflow: hidden;
 				&__title
 					display: flex;
 					justify-content: space-between;
