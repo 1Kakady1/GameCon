@@ -222,14 +222,7 @@ btnSearch.addEventListener("click", function(){
 	        container.hide("slow"); 
 	    }
 	});
-// audio
-if(audioOn == 1) {
-  audiojs.events.ready(function() {
-    var as = audiojs.createAll();
-  });
- }
 // параллах
-
 let $parallaxClass = $('.slider-img > div')[0].className,
 	$returnImgPr=0;
 	$parallaxClass= '.'+$parallaxClass;

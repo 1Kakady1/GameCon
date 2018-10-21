@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/flex.css">
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/audio.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -139,41 +140,41 @@
         </div>
       </div>
     </div>
-    <div class="game" style="position: relative;">
+    <div class="audio" style="position: relative;">
       <div class="search animated slideInRight">
         <h1>Поиск по странице</h1>
         <input class="search-text form-control" type="text" name="search">
       </div>
-      <div class="game-left-bg" style="margin-bottom: -26px;"></div>
-      <div class="game-wrap">
-        <div class="game-headr">
-          <div class="game-headr__title">
-            <h1>игры</h1>
-          </div>
-        </div>
-        <div class="game-post animated slideInDown">
+      <div class="audio-wrap">
+        <div class="audio-headr"></div>
+        <div class="audio-post animated slideInDown">
           <div class="post-wrap">
             <div class="post-img"><a href="#"><img src="./img/game1.png"></a></div>
             <div class="post-content">
               <div class="post-content__title">
                 <div class="title-itfo">
                   <h1>Evolve</h1>
-                  <p class="plat"><span class="plat__pc">PC,  </span><span class="plat__ps">PS4,</span><span class="plat__xbox">Xbox One</span></p>
                 </div>
-                <div class="title-raiting">8.2</div>
               </div>
               <p class="post-content__text">Добыча полезных ископаемых на некой планете, похожей на землю, прекращается из-за вмешательства представителей местной фауны. Причем терроризировать буровую установку и рабочих стало что-то очень большое, невиданное ранее.</p>
-              <div class="post-comments">
-                <div class="post-comments__view"> 
-                  <div class="count">24</div>
-                  <div class="icon"></div>
-                </div>
-                <div class="post-comments__com"> 
-                  <div class="count">23</div>
-                  <div class="icon"></div>
-                </div>
+            </div>
+          </div>
+          <div class="post-wrap">
+            <div class="post-wrap__column">
+              <div class="cover animated fadeIn"><img src="./img/cover/nota.jpg" alt=""></div>
+              <div class="audio-box">
+                <audio src="" controls id="audioPalyer"></audio>
+                <ul id="playlist">
+                  <li><i class="fas fa-music"></i><a href="./audio/Dark Souls OST - Гвин, Лорд Пепла.mp3">Dark Souls OST - Гвин, Лорд Пепла</a></li>
+                  <li><i class="fas fa-music"></i><a class="cover_bg" href="./audio/Dark Souls OST - Dark Souls End.mp3">Dark Souls OST - Гвин, Лорд Пепла</a></li>
+                  <li><i class="fas fa-music"></i><a class="cover_bg" href="./audio/Dark Souls OST - Гвин, Лорд Пепла.mp3">Dark Souls OST - Гвин, Лорд Пепла</a></li>
+                  <li><i class="fas fa-music"></i><a class="cover_bg" href="./audio/Dark Souls OST - Dark Souls End.mp3">Dark Souls OST - Гвин, Лорд Пепла</a></li>
+                  <li><i class="fas fa-music"></i><a class="cover_bg" href="./audio/Dark Souls OST - Гвин, Лорд Пепла.mp3">Dark Souls OST - Гвин, Лорд Пепла</a></li>
+                  <li><i class="fas fa-music"></i><a class="cover_bg" href="./audio/Dark Souls OST - Dark Souls End.mp3">Dark Souls OST - Гвин, Лорд Пепла</a></li>
+                  <li><i class="fas fa-music"></i><a class="cover_bg" href="./audio/Dark Souls OST - Гвин, Лорд Пепла.mp3">Dark Souls OST - Гвин, Лорд Пепла</a></li>
+                  <li><i class="fas fa-music"></i><a class="cover_bg" href="./audio/Dark Souls OST - Dark Souls End.mp3">Dark Souls OST - Гвин, Лорд Пепла																		</a></li>
+                </ul>
               </div>
-              <audio src="./audio/Dark Souls OST - Гвин, Лорд Пепла.mp3" preload="auto"></audio>
             </div>
           </div>
         </div>
@@ -232,7 +233,6 @@
     <script src="./js/main.js"></script>
     <script src="./js/search.js"></script>
     <script src="./js/send-msg.js"></script>
-    <script src="./js/audio.min.js"></script>
-    <script>let audioOn = 1</script>
+    <script src="./js/audioPlayer.js"></script>
   </body>
 </html>

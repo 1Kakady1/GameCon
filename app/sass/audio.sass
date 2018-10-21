@@ -1,0 +1,156 @@
+.audio
+	height: auto;
+	&-wrap
+		background: #2e8a7d;
+		height: auto;
+		padding-bottom: 82px;
+		width: 100%!important
+		padding-left: 110px!important
+	&-headr
+		&__title
+			& > h1
+				color: #ffffff!important;
+			& > .link-st
+				border-bottom: 1px dashed #ffffff;
+				color: #ffffff;
+				&:hover
+					color: #000000
+					border-bottom: 1px dashed #000080;
+	&-post
+		background: #ffffff
+		.post
+			&-wrap
+				justify-content: center
+			&-wrap__column
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				flex-direction: column
+				width: 90%
+				justify-content: center
+				.cover   
+					width: 256px;
+					height: 256px;
+					margin: 0 auto;
+					margin-bottom: 30px;
+					margin-top: 30px
+					img
+						width: 100%
+						height: 100%
+						border-radius: 150px
+				.audio-box
+					audio
+						width: 100%
+				ul
+					list-style: none
+					color: #000000;
+					font-family: "Open Sans", sans-serif;
+					font-size: 16px;
+					font-weight: 300;
+					line-height: 24px;
+					padding-left: 25px
+					padding-right: 25px
+					li
+						padding: 17px;
+						border: 1px solid #000
+						width: 100%;
+						display: flex;
+						align-items: center;
+						flex-flow: row nowrap;
+						&:hover
+							background: antiquewhite;
+							border: none
+						i
+							margin-right: 20px;
+				a
+					color: #000000;
+					font-family: "Open Sans", sans-serif;
+					font-size: 16px;
+					font-weight: 300;
+					line-height: 24px;
+					width: 93%;
+					display: flex;
+					height: 40px;
+					align-items: center;
+					&:hover
+						color: red
+				.current-song
+					background: antiquewhite;
+					border: none
+			&-comments
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center;
+			&-img
+				width: 230px;
+				height: 320px;
+				img
+					border-bottom: 5px solid #f80995;
+					height: 100%;
+					width: inherit;
+					-moz-transition: all 200ms linear;
+					-ms-transition: all 200ms linear;
+					-o-transition: all 200ms linear;
+					-webkit-transition: all 200ms linear;
+					transition: all 200ms linear;
+					&:hover
+						transform: scale(0.8);
+						-moz-transition: all 200ms linear;
+						-ms-transition: all 200ms linear;
+						-o-transition: all 200ms linear;
+						-webkit-transition: all 200ms linear;
+						transition: all 200ms linear;
+			&-content
+				padding-left: 21px;
+				padding-right: 20px
+				&__text
+					color: #000000;
+					font-family: "Open Sans", sans-serif;
+					font-size: 16px;
+					font-weight: 300;
+					line-height: 24px;
+					height: 150px;
+					overflow: hidden;
+				&__title
+					display: flex;
+					justify-content: space-between;
+					.title
+						&-itfo
+							h1
+								margin-top: 16px;
+								margin-bottom: 0
+								font-family: "Open Sans", sans-serif;
+								font-size: 30px;
+								font-weight: 700;
+							.plat
+								margin-top: 5px;
+								&__pc, &__ps, &__xbox
+									font-family: "Open Sans",sans-serif;
+									font-size: 14px;
+									font-weight: 300;
+									line-height: 24px;
+								&__xbox
+									color: #2a9657;
+								&__pc
+									color: #000000;
+								&__ps
+									color: #050099;
+						&-raiting
+							width: 81px;
+							height: 80px;
+							background-color: #f7d54a;
+							color: #000000;
+							font-family: "open-sans-extra-bold";
+							font-size: 30px;
+							font-weight: 400;
+							line-height: 24px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							position: relative;
+							bottom: 10px;

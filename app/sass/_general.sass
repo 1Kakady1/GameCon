@@ -1,7 +1,7 @@
-.news, .game, .video, .article
+.news, .game, .video, .article,.audio
 	margin-left: 110px
 	margin-right: 110px	
-	.news-headr, .game-headr, .video-headr, .article-headr
+	.news-headr, .game-headr, .video-headr, .article-headr,.audio-headr
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -10,7 +10,7 @@
 		justify-content: space-between
 		flex-flow: row nowrap;
 		border-bottom: 5px solid #f7f7f7
-		.news-headr__title, .game-headr__title, .video-headr__title, .article-headr__title
+		.news-headr__title, .game-headr__title, .video-headr__title, .article-headr__title,.audio-headr__title
 			display: -webkit-flex
 			display: -moz-flex
 			display: -ms-flex
@@ -26,7 +26,7 @@
 				font-weight: 400;
 				line-height: 24px;
 				margin: 0 0 0 38px;
-.game, .video
+.game, .video, .audio
 	margin-left: 0
 	margin-right: 0
 	display: -webkit-flex
@@ -40,13 +40,13 @@
 		width: 5%;
 		background-size: 100% 100%;
 		background-repeat: no-repeat;	
-	.game-wrap, .video-wrap
+	.game-wrap, .video-wrap, .audio-wrap
 		width: 95%
 		padding-left: 38px
 		padding-right: 110px
 		position: relative;
 		overflow: hidden;
-	.game-headr, .video-headr
+	.game-headr, .video-headr, .audio-headr
 		border-bottom: none!important
 		padding-top: 52px
 		padding-bottom: 68px
@@ -65,7 +65,7 @@
 				fill:  #ffffff
 		&__dot
 			margin-left: 9vw;
-	.game-post, .video-post
+	.game-post, .video-post, .audio-post
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -78,7 +78,7 @@
 				display: flex;
 				flex-flow: row nowrap;
 
-.game .game-post, .article .article-post 
+.game .game-post, .article .article-post, .audio-post
 	.post
 		&-comments
 			&__view, &__com
