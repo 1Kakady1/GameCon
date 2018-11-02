@@ -1,0 +1,110 @@
+.block
+	&-wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+	&-pagination
+		width: 100%
+	&-left
+		width: 40%
+		height: auto
+		&> .paginatian ul li
+			margin: 8px;
+		&> .paginatian ul
+			width: 30%;
+	&-right
+		width: 60%
+		height: auto
+		padding-right: 30px
+		padding-left: 30px
+#list-comments
+	border-bottom: 1px solid #eaeaea;
+#list-comments ul li
+	list-style: none;
+	font-family: "RobotoLight";
+	margin-bottom: 1.6vw;
+#list-comments ul
+	list-style: none;
+	position: relative;
+#list-comments ul ul
+	padding-left: 2vw;
+	margin-left: 2vw; 
+#list-comments ul ul:before
+	content: '';
+	display: block;
+	background-image: url(../img/svg/line.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 2vw;
+	height: 2vw;
+	position: absolute;
+	top: 0;
+	left: 0; 
+#list-comments .com .img-com
+	width: 150px;
+	height: 116px;
+	margin-right: 1.25vw;
+#list-comments .com .img-com img
+	width: 100%;
+#list-comments .com .msg-com h4
+	font-size: 16px;
+	color: #3c3c3c;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #a3a3a3;
+#list-comments .com .msg-com p
+	font-size: 21px;
+	color: #a3a3a3;
+	margin-top: 0.78vw;
+#list-comments .com .msg-com
+	width: 100%	
+#list-comments .com .msg-com span
+	font-size: 0.72vw;
+	color: #a3a3a3;
+#form-content
+	margin-top: 0.98vw
+.name-f-msg p
+	font-size: 1.25vw;
+	font-family: "RobotoThin";
+	margin-bottom: 0.67vw;
+	font-weight: 900;
+#left_form 
+	width: 50%;
+	padding-right: 0.5vw;
+#right_form
+	width: 50%;
+#right_form .input textarea
+	resize: none;
+	height: 6.5vw;
+#right_form button
+	border: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 0.72vw;
+	border-radius: 0;
+	width: 100%;
+	height: 3vw;
+	background-color: #30b5d8;
+	margin-top: 0.2vw;
+#right_form button:hover
+		background-color: #f2ca5b;
+.input
+	margin-bottom: 0.72vw;
+.input input, .input textarea
+	border: 1px solid #eaeaea;
+	min-height: 3vmax;
+	font-size: 0.72vw;
+	width: 100%;
+	padding: 0.93vw;
+.form_icon
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 3vw;
+	height: 3vw;
+	border: 1px solid #eaeaea;
+.form_icon img
+	width: 1.6vw;
+	height: 1.6vw;

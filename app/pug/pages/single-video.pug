@@ -1,0 +1,40 @@
+doctype html
+html(lang="ru-Ru")
+	head
+		title='Dark Souls 3 [Трейлер]'
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1" )
+		meta(name="GENERATOR", content="Microsoft FrontPage 4.0")
+		meta(name="ProgId", content="FrontPage.Editor.Document")
+		link(rel="shortcut icon", href="./icon.ico")
+		link(rel='stylesheet', href='./css/flex.css')
+		link(rel='stylesheet', href='./css/animate.min.css')
+		link(rel='stylesheet', href='./css/main.css')
+		link( rel="stylesheet", href="https://use.fontawesome.com/releases/v5.2.0/css/all.css", integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ", crossorigin="anonymous")
+		link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Nunito", rel="stylesheet")
+	body
+		include ../layout/header.pug
+		include ./include/forms
+		div(class="video video_column")
+			.search.animated.slideInRight
+				h1 Поиск по странице
+				input(type="text", class="search-text form-control", name="search")
+			.video-wrap.w100pr
+				.video-headr
+					h1 Dark Souls 3 [Трейлер]
+				.video-post.animated.slideInDown
+					.iframe-wrap
+						iframe(src="https://www.youtube.com/embed/QceL1YMAzTc", frameborder="0", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+			.video-comments
+				include ./include/comments
+				
+																								
+		-var arrayUrl = ["404.html","404.html","404.html"]
+		include ../layout/footer.pug
+
+		script(src="./js/libs.min.js")
+		script(src="./js/main.js")
+		script(src="./js/search.js")
+		script(src="./js/send-msg.js")

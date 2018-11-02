@@ -1,0 +1,63 @@
+.comments
+	h3 Комментарии
+	.block-wrap
+		.block-left
+			#list-comments
+				ul 
+					li
+						.com.main_flex__nowrap
+							.img-com
+								img(src="./img/404.jpg" alt="img comments user")
+							.msg-com
+								h4 
+									| ShaneFreer
+									| span 58 minutes ago
+								p great post brainartworks
+					li
+						.com.main_flex__nowrap
+							.img-com
+								img(src="./img/404.jpg" alt="img comments user")
+							.msg-com
+								h4 
+									| ShaneFreer
+									| span 58 minutes ago
+								p great post brainartworks
+					li
+						.com.main_flex__nowrap
+							.img-com
+								img(src="./img/404.jpg" alt="img comments user")
+							.msg-com
+								h4 
+									| ShaneFreer
+									| span 58 minutes ago
+								p great post brainartworks
+					li
+						.com.main_flex__nowrap
+							.img-com
+								img(src="./img/404.jpg" alt="img comments user")
+							.msg-com
+								h4 
+									| ShaneFreer
+									| span 58 minutes ago
+								p great post brainartworks great post brainartworks great post brainartworks great post brainartworks great post brainartworks great post brainartworks great post brainartworks great post brainartworks great post brainartworks
+			-var arrayUrl = ["404.html","404.html","404.html"]
+			include pagination		
+		.block-right
+			#form-content
+				.name-f-msg
+					p Добавить комментарий
+					form(action="", class="main_flex__nowrap")
+						#left_form
+							.input.main_flex__nowrap.flex__align-items_center
+								.form_icon
+									img(src="img/p.png", alt="")
+								input(type="text", placeholder="Имя")
+
+							.input.main_flex__nowrap.flex__align-items_center
+								.form_icon
+									img(src="img/msg.png", alt="")
+								input(type="text" placeholder="Email")
+						#right_form
+							.input.main_flex__nowrap.flex__align-items_center
+								textarea(name="msg", id="x",  placeholder="Сообщение")
+							button Отправить
