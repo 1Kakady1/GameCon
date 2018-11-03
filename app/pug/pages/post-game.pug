@@ -1,7 +1,7 @@
 doctype html
 html(lang="ru-Ru")
 	head
-		title='OST'
+		title='Пост для игры'
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1" )
 		meta(name="GENERATOR", content="Microsoft FrontPage 4.0")
@@ -11,6 +11,7 @@ html(lang="ru-Ru")
 		link(rel='stylesheet', href='./css/animate.min.css')
 		link(rel='stylesheet', href='./css/main.css')
 		link(rel='stylesheet', href='./css/single-post.css')
+		link(rel="stylesheet" href="./css/magnific-popup.css")
 		link( rel="stylesheet", href="https://use.fontawesome.com/releases/v5.2.0/css/all.css", integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ", crossorigin="anonymous")
 		link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet")
@@ -24,6 +25,7 @@ html(lang="ru-Ru")
 				input(type="text", class="search-text form-control", name="search")
 			.audio-wrap
 				.audio-headr
+					h1 Title
 				.audio-post.animated.slideInDown
 					.post-wrap
 						.post-img
@@ -31,44 +33,30 @@ html(lang="ru-Ru")
 						.post-content
 							.post-content__title
 								.title-itfo
-									h1 Dark Souls
+									h1 Evolve
+									p.plat
+										span.plat__pc PC,  
+										span.plat__ps PS4,
+										span.plat__xbox Xbox One
+								.title-raiting 8.2
 							p.post-content__text Dark Souls — видеоигра в жанре action/RPG с открытым миром, разработанная японской компанией From Software для платформ PlayStation 3, Xbox 360 и Windows. В Японии издателем игры выступала сама From Software; на международном рынке игру издавала компания Namco Bandai Games. Dark Souls, изначально известная под рабочим названием Project Dark, является идейным наследником игры Demon's Souls и второй частью в серии Souls. Версия игры для игровых консолей была выпущена в сентябре 2011 года, расширенная и дополненная версия для Windows с подзаголовком Prepare to Die Edition — в августе 2012 года. Дополнительный контент из ПК-версии игры был позже выпущен на консолях в виде загружаемого дополнения под названием Artorias of the Abyss. 25 Мая 2018 года для PC,PS4,Xbox One вышла Dark Souls: Remastered.
 					.post-wrap
 						.post-wrap__column
-							.cover.animated.fadeIn
-								img(src="./img/cover/nota.jpg", alt="")
-							.audio-box
-								audio(src="",controls,id="audioPalyer")
-								ul#playlist
-									li
-										i.fas.fa-music
-										a(href="./audio/Dark Souls OST - Гвин, Лорд Пепла.mp3") Dark Souls OST - Гвин, Лорд Пепла
-									li
-										i.fas.fa-music
-										a(href="./audio/Dark Souls OST - Dark Souls End.mp3" class="cover_bg") Dark Souls OST - Гвин, Лорд Пепла
-									li
-										i.fas.fa-music
-										a(href="./audio/Dark Souls OST - Гвин, Лорд Пепла.mp3" class="cover_bg") Dark Souls OST - Гвин, Лорд Пепла
-									li
-										i.fas.fa-music
-										a(href="./audio/Dark Souls OST - Dark Souls End.mp3" class="cover_bg") Dark Souls OST - Гвин, Лорд Пепла
-									li
-										i.fas.fa-music
-										a(href="./audio/Dark Souls OST - Гвин, Лорд Пепла.mp3" class="cover_bg") Dark Souls OST - Гвин, Лорд Пепла
-									li
-										i.fas.fa-music
-										a(href="./audio/Dark Souls OST - Dark Souls End.mp3" class="cover_bg") Dark Souls OST - Гвин, Лорд Пепла
-									li
-										i.fas.fa-music
-										a(href="./audio/Dark Souls OST - Гвин, Лорд Пепла.mp3" class="cover_bg") Dark Souls OST - Гвин, Лорд Пепла
-									li
-										i.fas.fa-music
-										a(href="./audio/Dark Souls OST - Dark Souls End.mp3" class="cover_bg") Dark Souls OST - Гвин, Лорд Пепла																		
-		-var arrayUrl = ["404.html","404.html","404.html"]	
+							.popup-gallery
+								a(href="./img/dr.png", title="Очиститель")
+										img(src="./img/dr.png", width="75", height="75")
+								a(href="./img/dr.png", title="Очиститель")
+										img(src="./img/dr.png", width="75", height="75")
+								a(href="./img/dr.png", title="Очиститель")
+										img(src="./img/dr.png", width="75", height="75")
+			.video-comments
+				include ./include/comments																		
+		-var arrayUrl = ["404.html","404.html","404.html"]
 		include ../layout/footer.pug
 
 		script(src="./js/libs.min.js")
 		script(src="./js/main.js")
 		script(src="./js/search.js")
 		script(src="./js/send-msg.js")
-		script(src="./js/audioPlayer.js")
+		script(src="./js/jquery.magnific-popup.min.js")
+		script(src="./js/popup-gallery.js")
