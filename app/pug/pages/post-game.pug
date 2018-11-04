@@ -19,17 +19,15 @@ html(lang="ru-Ru")
 	body
 		include ../layout/header.pug
 		include ./include/forms
-		div(class="audio")
+		div(class="p-game")
 			.search.animated.slideInRight
 				h1 Поиск по странице
 				input(type="text", class="search-text form-control", name="search")
-			.audio-wrap
-				.audio-headr
-					h1 Title
-				.audio-post.animated.slideInDown
+			.p-game-wrap
+				.p-game-headr
+					h1 DARK SOULS™: Prepare To Die™ Edition on Steam
+				.p-game-post.animated.slideInDown
 					.post-wrap
-						.post-img
-								img(src="./img/Dark_Souls_Remastered.jpg")
 						.post-content
 							.post-content__title
 								.title-itfo
@@ -38,18 +36,38 @@ html(lang="ru-Ru")
 										span.plat__pc PC,  
 										span.plat__ps PS4,
 										span.plat__xbox Xbox One
-								.title-raiting 8.2
+								.title-raiting.title-raiting_pos-abs 8.2					
+						.post-img
+								img(src="./img/Dark_Souls_Remastered.jpg" alt="")
+						.post-content
 							p.post-content__text Dark Souls — видеоигра в жанре action/RPG с открытым миром, разработанная японской компанией From Software для платформ PlayStation 3, Xbox 360 и Windows. В Японии издателем игры выступала сама From Software; на международном рынке игру издавала компания Namco Bandai Games. Dark Souls, изначально известная под рабочим названием Project Dark, является идейным наследником игры Demon's Souls и второй частью в серии Souls. Версия игры для игровых консолей была выпущена в сентябре 2011 года, расширенная и дополненная версия для Windows с подзаголовком Prepare to Die Edition — в августе 2012 года. Дополнительный контент из ПК-версии игры был позже выпущен на консолях в виде загружаемого дополнения под названием Artorias of the Abyss. 25 Мая 2018 года для PC,PS4,Xbox One вышла Dark Souls: Remastered.
 					.post-wrap
 						.post-wrap__column
-							.popup-gallery
-								a(href="./img/dr.png", title="Очиститель")
-										img(src="./img/dr.png", width="75", height="75")
-								a(href="./img/dr.png", title="Очиститель")
-										img(src="./img/dr.png", width="75", height="75")
-								a(href="./img/dr.png", title="Очиститель")
-										img(src="./img/dr.png", width="75", height="75")
-			.video-comments
+							.post-content
+								h3 Рейтинг
+								.vote
+									.star-wrap
+										i(class="fas fa-star fa-4x")
+										i(class="fas fa-star fa-4x")
+										i(class="fas fa-star fa-4x")
+										i(class="fas fa-star fa-4x")
+										i(class="fas fa-star fa-4x")
+										i(class="far fa-star fa-4x")
+										i(class="far fa-star fa-4x")
+										i(class="far fa-star fa-4x")
+									.progress-bar
+							.post-content
+								.post-content__title.title_mgb
+									.title-itfo
+										h1 Галерея
+								.popup-gallery
+									a(href="./img/dr.png", title="Очиститель")
+											img(src="./img/dr.png", class="img_s")
+									a(href="./img/dr.png", title="Очиститель")
+											img(src="./img/dr.png", class="img_s")
+									a(href="./img/dr.png", title="Очиститель")
+											img(src="./img/dr.png", class="img_s")
+			.p-game-comments.container_pd110
 				include ./include/comments																		
 		-var arrayUrl = ["404.html","404.html","404.html"]
 		include ../layout/footer.pug

@@ -1,7 +1,10 @@
-.audio
+.audio, .p-game
 	height: auto;
 	margin-top: 46px;
 	position: relative;
+	&-comments
+		background: #fff;
+		height: auto;
 	&-wrap
 		background: #2e8a7d;
 		height: auto;
@@ -9,6 +12,12 @@
 		width: 100%!important
 		padding-left: 110px!important
 	&-headr
+		&>h1
+			margin-bottom: 0;
+			font-family: "Open Sans",sans-serif;
+			font-weight: 700;
+			padding-top: 20px;
+			padding-bottom: 20px;
 		&__title
 			& > h1
 				color: #ffffff!important;
@@ -73,9 +82,9 @@
 					font-size: 16px;
 					font-weight: 300;
 					line-height: 24px;
-					width: 93%;
+					width: 32%;
 					display: flex;
-					height: 40px;
+					height: auto;
 					align-items: center;
 					&:hover
 						color: red
@@ -107,8 +116,9 @@
 					font-family: "Open Sans", sans-serif;
 					font-size: 16px;
 					font-weight: 300;
-					line-height: 24px;
-					height: 150px;
+					line-height: 30px;
+					height: auto;
+					width: 88%
 				&__title
 					display: flex;
 					justify-content: space-between;
@@ -145,5 +155,35 @@
 							display: flex;
 							justify-content: center;
 							align-items: center;
-							position: relative;
-							bottom: 10px;
+							&_pos
+								&-abs
+									position: absolute
+									left: 75%;
+									top: 8%;
+								&-rel
+									position: relative;
+									bottom: 10px;
+.p-game
+	&-post
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		.post-wrap
+			width: 50%;
+			position: relative
+	&-wrap
+		padding-right: 110px;	
+.img_s
+	width: 194px
+	height: 194px
+.title_mgb
+	margin-bottom: 6%
+.popup-gallery
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-flow: row wrap;
