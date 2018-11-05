@@ -164,6 +164,8 @@
 									position: relative;
 									bottom: 10px;
 .p-game
+	.search
+		height: 9%!important;
 	&-post
 		display: -webkit-flex
 		display: -moz-flex
@@ -187,4 +189,18 @@
 	display: -o-flex
 	display: flex
 	flex-flow: row wrap;
+img.rot
+	animation: 2s ease-in 0s normal none infinite running rot;
+	-webkit-animation: 2s linear 0s normal none infinite running rot;
+	animation-timing-function: steps(100, end);
+@keyframes rot
+	0%
+		transform: rotate(0deg)  scale(0.5,0.5) scale(1.5,1.5);
+	100%
+		transform: rotate(360deg)  scale(1.5,1.5) scale(0.5,0.5);
+@-webkit-keyframes rot
+	0%
+		transform: rotate(0deg)  scale(1,1);
+	100%
+		transform: rotate(360deg)  scale(1,1);
 @import _vote

@@ -1,24 +1,36 @@
-.block
-	&-wrap
+.comments
+	&-title
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
 		display: -o-flex
 		display: flex
-	&-pagination
-		width: 100%
-	&-left
-		width: 40%
-		height: auto
-		&> .paginatian ul li
-			margin: 8px;
-		&> .paginatian ul
-			width: 30%;
-	&-right
-		width: 60%
-		height: auto
-		padding-right: 30px
-		padding-left: 30px
+		justify-content: space-around;
+		h3
+			font-family: 'Nunito', sans-serif;
+			font-weight: 700;
+			font-size: 21px
+	.block
+		&-wrap
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+		&-pagination
+			width: 100%
+		&-left
+			width: 40%
+			height: auto
+			&> .paginatian ul li
+				margin: 8px;
+			&> .paginatian ul
+				width: 30%;
+		&-right
+			width: 60%
+			height: auto
+			padding-right: 30px
+			padding-left: 30px
 #list-comments
 	border-bottom: 1px solid #eaeaea;
 #list-comments ul li

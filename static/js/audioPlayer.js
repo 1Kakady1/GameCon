@@ -7,6 +7,7 @@ function audioPalyer(){
 	$("#playlist li a").click(function(e) {
 		e.preventDefault();
 		randCover(this);
+		$(".cover > img").addClass("rot");
 		$("#audioPalyer")[0].src = this;
 		$("#playlist li i").removeClass('fa-play');
 		$("#audioPalyer")[0].play();
@@ -18,7 +19,6 @@ function audioPalyer(){
 	});
 
 	$("#audioPalyer")[0].addEventListener("ended", function(){
-
 		currentSong++;
 		$("#playlist .current-song i").removeClass('fa-play');
 		 if(currentSong==$("#playlist li a").length)
@@ -32,12 +32,13 @@ function audioPalyer(){
 
 	$("#audioPalyer")[0].addEventListener("pause", function(){
 		$('.cover > img')[0].src = `./img/cover/nota.jpg`;
+		$(".cover > img").removeClass("rot");
 	});
 
 	$("#audioPalyer")[0].addEventListener("play", function(){
 		
 		$('.cover > img')[0].src = `./img/cover/${coverImg}`;
-	
+		$(".cover > img").addClass("rot");
 	});
 
 	function randCover(a){
