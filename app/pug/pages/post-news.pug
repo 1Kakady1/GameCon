@@ -1,7 +1,7 @@
 doctype html
 html(lang="ru-Ru")
 	head
-		title='Пост для игры'
+		title='Пост для news'
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1" )
 		meta(name="GENERATOR", content="Microsoft FrontPage 4.0")
@@ -19,24 +19,15 @@ html(lang="ru-Ru")
 	body
 		include ../layout/header.pug
 		include ./include/forms
-		div(class="p-game")
+		div(class="p-article")
 			.search.animated.slideInRight
 				h1 Поиск по странице
 				input(type="text", class="search-text form-control", name="search")
-			.p-game-wrap
-				.p-game-headr
+			.p-article-wrap
+				.p-article-headr
 					h1 DARK SOULS™: Prepare To Die™ Edition on Steam
-				.p-game-post.animated.slideInDown
+				.p-article-post.animated.slideInDown
 					.post-wrap
-						.post-content
-							.post-content__title
-								.title-itfo
-									h1 Evolve
-									p.plat
-										span.plat__pc PC,  
-										span.plat__ps PS4,
-										span.plat__xbox Xbox One
-								.title-raiting.title-raiting_pos-abs 8.2					
 						.post-img
 								img(src="./img/Dark_Souls_Remastered.jpg" alt="")
 						.post-content
@@ -44,29 +35,28 @@ html(lang="ru-Ru")
 					.post-wrap
 						.post-wrap__column
 							.post-content
-								include ./include/vote
+								.title-itfo
+									h1 Видео
+								.iframe-wrap
+									iframe(src="https://www.youtube.com/embed/QceL1YMAzTc", frameborder="0", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
 							.post-content
 								.post-content__title.title_mgb
 									.title-itfo
-										h1 Галерея
+										h1 Обои
 								.popup-gallery
-									a(href="./img/article.png",class="mg_b", title="Очиститель")
+									a(href="./img/article.png", class="mg_b", title="Очиститель")
 											img(src="./img/article.png", class="img_s")
-									a(href="./img/dr.png",class="mg_b", title="Очиститель")
+									a(href="./img/dr.png", class="mg_b", title="Очиститель")
 											img(src="./img/dr.png", class="img_s")
-									a(href="./img/dr.png",class="mg_b", title="Очиститель")
+									a(href="./img/dr.png", class="mg_b", title="Очиститель")
 											img(src="./img/dr.png", class="img_s")
-									a(href="./img/article.png",class="mg_b", title="Очиститель")
+									a(href="./img/article.png", class="mg_b", title="Очиститель")
 											img(src="./img/article.png", class="img_s")
-									a(href="./img/dr.png",class="mg_b", title="Очиститель")
+									a(href="./img/dr.png", class="mg_b", title="Очиститель")
 											img(src="./img/dr.png", class="img_s")
-									a(href="./img/dr.png",class="mg_b", title="Очиститель")
+									a(href="./img/dr.png", class="mg_b", title="Очиститель")
 											img(src="./img/dr.png", class="img_s")
-							.post-content
-								.title-itfo
-									p Доступны OST
-										a(href="./single-audio.html") перейти
-			.p-game-comments.container_pd110
+			.p-article-comments.container_pd110
 				include ./include/comments																		
 		-var arrayUrl = ["404.html","404.html","404.html"]
 		include ../layout/footer.pug
