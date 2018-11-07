@@ -1,30 +1,9 @@
-
-let viewForm = document.getElementsByClassName('view-form'),
-  	overlay = document.querySelector('.modal'),
-  	close = document.getElementsByClassName('close'),
-  	wrapModal = document.querySelector('.wrap-form');
-console.log(viewForm);
-
-viewForm[0].addEventListener('click',function(){
-	overlay.classList.add('animated',"fadeIn");
-	overlay.style.display = 'flex';
-	document.body.style.overflow = 'hidden';
-});
-
-
-close[0].addEventListener('click', function(){
-    overlay.style.display = 'none';
-    overlay.classList.remove('animated',"fadeIn");
+$('.close').on('click', function(){
+    let container = $('.modal');
     document.body.style.overflow = '';
-  });
-
-	$(document).mouseup(function (e) {
-	    var container = $(overlay);
-	    if (container.has(e.target).length === 0){
-	        document.body.style.overflow = '';
-	        container.hide("slow"); 
-	    }
-	});
+    container.hide("slow");
+    $("#new-content").remove();
+});
 
 $('#send').click (function () {
 	var email = $('#email').val ();

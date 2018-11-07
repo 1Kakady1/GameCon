@@ -162,64 +162,50 @@ btnSearch.addEventListener("click", function(){
     });
   }
 
-  // форма регистрации
+    function dataPage(a){
+       switch (a) {
+           case "aunt": return ["r-a",1]; break;
+           case "reg": return ["r-a",0]; break;
+           case "msg": return ["send",0]; break;
+           case "addPost": return ["add-post",0]; break;
+       }
+    }
 
-  let $btnTab = $('.tab-btn > button'),
-  	  $tab = $('.tab'),
-  	  $loginBtn=$('.login'),
-  	  $registerBtn =$('.register'),
-  	  $modalIn = $('.modal-in_reg'),
-  	  timerIdReg = '',
-  	  closeInReg = document.getElementsByClassName("close-in_reg");
+    function  showTabG($n){
+        let $tab = $('.tab');
+        console.log($tab);
+        for (let $i = 0; $i < $tab.length; $i++) {
+            $($tab[$i]).hide("slow");
+        }
 
-  	  showTab(0);
+        $($tab[$n]).show("slow");
+    }
 
-	function showTab($n){
+    let indexPage = "",flag=0;
+  $('.view-form').on('click', function(){
+        event.preventDefault();
+        $('.modal').show("slow").css('display','flex');
+        $('body').css('overflow','hidden');
+        let $namePage = dataPage($(this).data('in'));
+        if(indexPage != $namePage[0]){
+            $( ".modal" ).load( `ajaxPage/${$namePage[0]}.html`);
+            indexPage = $namePage[0];
+        }
+    });
 
-		for (let $i = 0; $i< $tab.length; $i++ ) {
-			$($tab[$i]).hide("slow");	
-		}
+    $(document).mouseup(function (e) {
+        let container = $('.modal');
+        if (container.has(e.target).length === 0){
+            document.body.style.overflow = '';
+            container.hide("slow");
+            //$("#new-content").remove();
+        }
+    });
 
-		$($tab[$n]).show("slow");
-	}
-
-	$($btnTab[0]).on('click', function(event) {
-		event.preventDefault();
-		document.body.style.overflow = 'hidden';
-	  	showTab(0);
-	});
-
-	$($btnTab[1]).on('click', function(event) {
-		event.preventDefault();
-		document.body.style.overflow = 'hidden';
-	  	showTab(1);
-	});
-
-	$($loginBtn[0]).on('click', function(event) {
-		event.preventDefault();
-		$($modalIn).css('display','flex');
-		document.body.style.overflow = 'hidden';
-	  	showTab(0);
-	});
-
-	$($registerBtn[0]).on('click', function(event) {
-		event.preventDefault();
-		$($modalIn).css('display','flex');
-		document.body.style.overflow = 'hidden';
-	  	showTab(1);
-	});
-
- closeInReg[0].addEventListener('click', function(){
-    let container = $($modalIn);
-    container.hide("slow");
-    document.body.style.overflow = '';
-  });
-
-	$(document).mouseup(function (e) {
-	    let container = $($modalIn);
-	    if (container.has(e.target).length === 0){
-	        document.body.style.overflow = '';
-	        container.hide("slow"); 
-	    }
-	});
+    $('.close').on('click', function(){
+        let container = $('.modal');
+        document.body.style.overflow = '';
+        container.hide("slow");
+        //$("#new-content").remove();
+    });
 });

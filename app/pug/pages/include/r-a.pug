@@ -1,0 +1,68 @@
+doctype html
+html(lang="ru-Ru")
+	head
+		title='AM4'
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1" )
+		meta(name="GENERATOR", content="Microsoft FrontPage 4.0")
+		meta(name="ProgId", content="FrontPage.Editor.Document")
+	body
+		.wrap-form
+			.close X
+			.contact-info
+				.tab-btn
+					button(class="btn active", type="submit", id="tab-log") Вход
+					button(class="btn", type="submit", id="tab-reg") Регистрация
+				.logo-inf.logo
+					img(src="./img/logo.png", class="phone" alt="logo")
+			.wrap-tab
+				.tab
+					form(action="#")
+						.container.container_column
+							.column-left.column-left_w100
+								label(for="login") Логин
+								input(type="text", name="login", class="form-control")
+								label(for="password") Пароль
+								input(type="password", name="password", class="form-control")
+							.icons-social
+								a(href="google.com", class="link_bg-red")
+									i.fab.fa-google-plus-g
+								a(href="twitter.com", class="link_bg-opblue")
+									i.fab.fa-twitter
+								a(href="facebook.com", class="link_bg-blue")
+									i.fab.fa-facebook-f
+								a(href="vk.com", class="link_bg-pink")
+									i.fab.fa-pinterest-p
+								a(href="vk.com", class="link_bg-green")
+									i.fab.fa-vk
+						button(type="submit", name="in", value="", class="btn" id="send-login") вход
+				.tab
+					form(action="#")
+						.container
+							.column-left
+								label(for="name") Ваше имя
+								input(type="text", name="name", class="form-control")
+								label(for="email") Ваш Email
+								input(type="email", name="email", class="form-control")
+							.column-right
+								label(for="password") Пароль
+								input(type="text", name="password", class="form-control")
+								label(for="login") Желаемый логин
+								input(type="text", name="login", class="form-control")
+						.icons-social
+							a(href="google.com", class="link_bg-red")
+								i.fab.fa-google-plus-g
+							a(href="twitter.com", class="link_bg-opblue")
+								i.fab.fa-twitter
+							a(href="facebook.com", class="link_bg-blue")
+								i.fab.fa-facebook-f
+							a(href="vk.com", class="link_bg-pink")
+								i.fab.fa-pinterest-p
+							a(href="vk.com", class="link_bg-green")
+								i.fab.fa-vk
+						button(type="submit", name="reg", value="", class="btn" id="send-register") Регистрация
+				#error-msg
+					.prod-send
+					div
+					span
+		script(src="./js/form-reg.js")

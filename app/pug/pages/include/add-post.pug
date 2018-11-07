@@ -1,0 +1,39 @@
+doctype html
+html(lang="ru-Ru")
+	head
+		title='AM4'
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1" )
+		meta(name="GENERATOR", content="Microsoft FrontPage 4.0")
+		meta(name="ProgId", content="FrontPage.Editor.Document")
+	body
+		.wrap-form
+			.close X
+			.contact-info
+				h3  Заполните информацию и после проверки ссылка на статью будет добавлена.
+				.logo-inf.logo
+					img(src="./img/logo.png", class="phone" alt="logo")
+			form(action="#",enctype="multipart/form-data", runat="server")
+				.container
+					.column-left
+						label(for="title") Название
+						input(type="text", name="title", class="form-control", id="title", onclick="$(this).css('border-color','#ccc')" )
+						label(for="go") Призыв
+						input(type="text", name="go", class="form-control", id="go", onclick="$(this).css('border-color','#ccc')" )
+						label(for="urlPost") Ссылка на статью
+						input(type="text", name="urlPost", class="form-control", id="urlPost", onclick="$(this).css('border-color','#ccc')" )
+						label(for="imgInp") Изображение поста (по возможности)
+						input(type="file", name="img-pp", class="form-control", id="imgInp", onclick="$(this).css('border-color','#ccc')" )
+						.img-preview Превью
+							img( id="blah", src="./img/404.jpg",alt="your image")
+					.column-right
+						label(for="opinion") Ваше мнение
+						textarea(rows="8" cols="45" name="text", class="txt", id="opinion")
+						label(for="exp") Краткий фрагмент текста
+						textarea(rows="9" cols="45" name="text", class="txt", id="exp")
+				button(type="submit", name="btn", value="", class="btn" id="send") Отправить
+				#error-msg
+					.prod-send
+					div
+					span
+		script(src="./js/preview.js")

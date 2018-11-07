@@ -1,0 +1,34 @@
+doctype html
+html(lang="ru-Ru")
+	head
+		title='AM4'
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1" )
+		meta(name="GENERATOR", content="Microsoft FrontPage 4.0")
+		meta(name="ProgId", content="FrontPage.Editor.Document")
+	body
+		.wrap-form
+			.close X
+			.contact-info
+				.tel
+					h3  Lorem ipsum dolor sit amet.
+				.logo-inf.logo
+					img(src="./img/logo.png", class="phone" alt="logo")
+			form(action="#")
+				.container
+					.column-left
+						label(for="name") Ваше имя
+						input(type="text", name="name", class="form-control", id="name", onclick="$(this).css('border-color','#ccc')" )
+						label(for="email") Ваш Email
+						input(type="email", name="email", class="form-control", id="email", onclick="$(this).css('border-color','#ccc')" )
+						label(for="phone") Ваш телефон
+						input(type="tel", name="tel", class="form-control", id="phone", onclick="$(this).css('border-color','#ccc')" )
+					.column-right
+						label(for="msg") Сообщение(.....)
+						textarea(rows="8" cols="45" name="text", class="txt", id="msg")
+				button(type="submit", name="btn", value="", class="btn" id="send") Отправить
+				#error-msg
+					.prod-send
+					div
+					span
+		script(src="./js/send-msg.js")
