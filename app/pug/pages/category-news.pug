@@ -14,7 +14,7 @@ html(lang="ru-Ru")
 		link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet")
 		link(href="https://fonts.googleapis.com/css?family=Nunito", rel="stylesheet")
-	body(style="background: #f2ca5b;")
+	body
 		include ../layout/header.pug
 		-var title = "Ненавязчивый анализ Mirror’s Edge",content="Ещё совсем недавно осень считалась главным \nпоставщиком крупных игровых релизов. Полки\nмагазинов ломились от новинок, а от \nпокупателей не было отбоя. Доходило до того,\nчто к концу сезона кошельки походили на выпотрошенные туши.",img="Preview.png",pageParallax="news",onSort=0;
 		include ./include/slider
@@ -23,13 +23,6 @@ html(lang="ru-Ru")
 			.news-headr
 				.news-headr__title
 					h1 новости
-					a(href="./category-news.html" class="link-st") В начало
-				.news-headr__list
-					select#propertyType.select.form-control.input-lg(form='addProperty', name='propertyType')
-						option(value='0', selected) Все новости
-						option(value='1') Top
-						option(value='2') Новинки
-						option(value='3') В разработке
 			.news-post
 				.w50.h320.news-post__column
 					.post
@@ -109,3 +102,5 @@ html(lang="ru-Ru")
 		script(src="./js/send-msg.js")
 		script(src="./js/parallax.min.js")
 		script(src="./js/parralaxMy.js")
+		script.
+			$(".paginatian").css({"position":" relative","z-index":"6"})

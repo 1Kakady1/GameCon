@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
   </head>
-  <body style="background: #f2ca5b;">
+  <body>
+    <!-- исправить название класса .paginatian -> .pagination-->
     <header>
       <nav class="menu">
         <div class="menu-start">
@@ -84,15 +85,7 @@
     <div class="news">
       <div class="news-headr">
         <div class="news-headr__title">
-          <h1>новости</h1><a class="link-st" href="./category-news.html">В начало</a>
-        </div>
-        <div class="news-headr__list">
-          <select class="select form-control input-lg" id="propertyType" form="addProperty" name="propertyType">
-            <option value="0" selected>Все новости</option>
-            <option value="1">Top</option>
-            <option value="2">Новинки</option>
-            <option value="3">В разработке</option>
-          </select>
+          <h1>новости</h1>
         </div>
       </div>
       <div class="news-post">
@@ -223,5 +216,6 @@
     <script src="./js/send-msg.js"></script>
     <script src="./js/parallax.min.js"></script>
     <script src="./js/parralaxMy.js"></script>
+    <script>$(".paginatian").css({"position":" relative","z-index":"6"})</script>
   </body>
 </html>
