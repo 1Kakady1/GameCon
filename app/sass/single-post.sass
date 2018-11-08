@@ -1,6 +1,8 @@
+.audio .search
+	height: 12%;
 .audio, .p-game,.p-article
 	height: auto;
-	margin-top: 46px;
+	margin-top: 5px;
 	position: relative;
 	&-comments
 		background: #fff;
@@ -186,14 +188,15 @@
 		display: flex
 		.post-wrap
 			width: 50%;
+			height: 100%;
 			position: relative
 	&-wrap
 		padding-right: 110px;	
 .img_s
-	width: 194px
-	height: 194px
+	width: 100%
+	height: 85%
 .mg_b
-	margin-bottom: 15px
+	margin: 0 0 0 6px;
 .iframe-wrap
 	width: 100%
 	height: 454px
@@ -237,3 +240,8 @@ img.rot
 	100%
 		transform: rotate(360deg)  scale(1,1);
 @import _vote
+
+@import media/single-post/_media1520
+@import media/single-post/_media1320
+@import media/single-post/_media996
+@import media/single-post/_media600

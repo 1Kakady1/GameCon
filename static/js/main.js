@@ -1,5 +1,5 @@
 // проверка размера крана
-  function windowSize(){
+ /* function windowSize(){
     if ($(window).width() <= '540'){
     	let url = "phone.html";
 		$(location).attr('href',url);
@@ -7,7 +7,7 @@
 }
 		$(window).on('load resize',windowSize);
 
-
+*/
 window.addEventListener("DOMContentLoaded", function(){
 	"use strict";
 // видео вкл. при ховер(ifraim)
