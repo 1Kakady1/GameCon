@@ -34,6 +34,8 @@ console.log($returnImgPr)
 $($parallaxClass).parallax({
   	imageSrc: `./img/${$returnImgPr}`,
   	bleed: 0,
-  	speed: 0.2
+  	speed: 0.2,
+  	androidFix: true,
+  	iosFix: true
   });
 });

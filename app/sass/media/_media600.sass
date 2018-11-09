@@ -139,6 +139,23 @@
 	.video .video-wrap
 		padding-right: 15px;
 		padding-left: 15px!important;
+@media screen and (max-width: 540px)
+	footer .footer-wrap_bg
+		padding-left: 21px;
+		padding-right: 0;
+		background: #30b5d8;
+	footer .footer-wrap .column-left .content button
+		display: none
+	footer .footer-wrap .column-right
+		width: 100%;
+		display: none;
+	footer a
+		color: #fff;
+		text-decoration: none;  
+	footer .footer-wrap .column-left .content::after
+		display: none
+	footer
+		height: auto;
 @media screen and (max-width: 490px)
 	.w50.h650 .post.h325 .post-img.w50
 		width: 40%
@@ -160,9 +177,45 @@
 		font-size: 22px;
 	.menu-items .submenu
 		left: -74%;
+	.modal .contact-info, .modal-in_reg .contact-info
+		flex-direction: column;
+	.modal .wrap-form .tab-btn, .modal-in_reg .wrap-form .tab-btn
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	.modal .contact-info .logo-inf img, .modal-in_reg .contact-info .logo-inf img, header .menu-logo__wh
+		width: 100%;
+		height: 100%;
+		border-radius: 16px;
+	.modal .contact-info .logo-inf, .modal-in_reg .contact-info .logo-inf
+		width: 100%;
+		text-align: center
+	.modal .contact-info .logo-inf img,
+		width: 78%;
+		height: 78%;
+		border-radius: 16px;
+	.modal .wrap-form #tab-log, .modal .wrap-form #tab-reg, .modal-in_reg .wrap-form #tab-log, .modal-in_reg .wrap-form #tab-reg
+		font-size: 11px;
+	.search h1
+		font-size: 21px;
+	.search input
+		height: 21%;
+		font-size: 2rem;
 @media screen and (max-width: 420px)
 	header .menu-items .submenu
 		top: 40px;
 		left: 69%;
+	.slider .slider-items .content-wrap__text
+		width: 254px;
+		height: auto;
+		margin-left: 79px;
+		font-size: 11px;
+	.slider .slider-items .content-wrap__title
+		margin-left: 78px;
+		font-size: 15px;
+@media screen and (max-width: 390px)
+	header .menu-items .submenu
+		top: 46px;
+		left: 10%;
 
 
