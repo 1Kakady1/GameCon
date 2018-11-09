@@ -32,7 +32,7 @@ let $parallaxClass = $('.slider-img > div')[0].className,
 $returnImgPr = returnImg($parallaxClass);
 console.log($returnImgPr)
 $($parallaxClass).parallax({
-  	imageSrc: `./img/${$returnImgPr}`,
+  	imageSrc: './img/'+$returnImgPr,
   	bleed: 0,
   	speed: 0.2,
   	androidFix: true,

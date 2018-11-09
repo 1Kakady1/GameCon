@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 /* =============================== 
 			настройки
    ==============================*/ 
@@ -80,7 +80,7 @@ let searchForm = document.getElementsByName('search'),
 						
 						let pref = alertContent(countSearch);
 						arrayDOM.spanSearch = document.getElementsByClassName(style.cssClassX);
-						isAlertWork(`По запросу найдено: ${countSearch} ${pref}`);
+						isAlertWork('По запросу найдено:'+ ' '+countSearch+ ' '+pref);
 						arrayDOM.spanSearch[0].classList.add(style.cssClassY);
 						time = performance.now() - time;
 						console.log('Время выполнения = ', time);
@@ -174,8 +174,8 @@ if(arrowPrev.length != 0 && arrowNext.length != 0){
 				bufMass.splice(i, 1);
 				i--;
 			} else {
-					if ( bufMass[i].toUpperCase() == elemSearh.toUpperCase() && bufMass[i-1] !=`class="${style.cssClassX}">`) {
-						bufMass[i] = `<mark class="${style.cssClassX}">${elemSearh}</mark>`;
+					if ( bufMass[i].toUpperCase() == elemSearh.toUpperCase() && bufMass[i-1] !='class="'+style.cssClassX+'">') {
+						bufMass[i] = '<mark class="'+style.cssClassX+'">'+elemSearh+'</mark>';
 						countSearch++;
 					}
 			}
@@ -357,62 +357,7 @@ if(arrowPrev.length != 0 && arrowNext.length != 0){
 	function createStyle(){
 		let styleElem = document.createElement('style');
 		styleElem.type = 'text/css';
-		styleElem.innerHTML = `
-		.margin-top{margin-top: 500px;}
-		a, a:hover, button, button:hover, .anime {
-			  -moz-transition: all 200ms linear;
-			  -ms-transition: all 200ms linear;
-			  -o-transition: all 200ms linear;
-			  -webkit-transition: all 200ms linear;
-			  transition: all 200ms linear;
-			  cursor: pointer; 
-			}
-			.${style.cssClassX}{color: ${style.colorText}!important;font-size: 13px!important;padding-left:0!important;}
-			.${style.cssClassY}{background: ${style.colorBg}!important;}
-			.btn-fixed {
-				position: fixed;
-			    right: 33px;
-			    width: 60px;
-			    height: 60px;
-			    z-index: 4;
-			    border-radius: 30px;
-			    border: none;
-			    background: rgb(228, 224, 224);
-			    outline:none;
-			}
-
-			.btn-fixed:hover,.arrow .arrow-prev:hover, .arrow .arrow-next:hover{
-
-				background: rgb(239, 216, 216);
-				width: 57px;
-			    height: 57px;
-
-
-			}
-
-			.btn-fixed svg, .arrow svg {
-				width: 100%;
-			    height: 100%;
-			}
-
-			.arrow{
-				display: none;
-			    justify-content: flex-end;
-			    position: fixed;
-			    right: 30px;
-			    top: 90px;
-			    z-index: 4;
-			}
-
-			.arrow .arrow-prev, .arrow .arrow-next {
-				width: 30px;
-				height: 30px;
-			    border-radius: 30px;
-			    border: none;
-			    background: rgb(228, 224, 224);
-			    outline:none;
-			    margin-right: 2px;
-			}`;
+		styleElem.innerHTML = '.arrow,.btn-fixed{position:fixed;z-index:4}.margin-top{margin-top:500px}.anime,a,a:hover,button,button:hover{-moz-transition:all .2s linear;-ms-transition:all .2s linear;-o-transition:all .2s linear;-webkit-transition:all .2s linear;transition:all .2s linear;cursor:pointer}.'+style.cssClassX+'{color:'+style.colorText+'!important;font-size:13px!important;padding-left:0!important}.'+style.cssClassY+'{background:0 0!important}.btn-fixed{right:33px;width:60px;height:60px;border-radius:30px;border:none;background:#e4e0e0;outline:0}.arrow .arrow-next:hover,.arrow .arrow-prev:hover,.btn-fixed:hover{background:#efd8d8;width:57px;height:57px}.arrow svg,.btn-fixed svg{width:100%;height:100%}.arrow{display:none;justify-content:flex-end;right:30px;top:90px}.arrow .arrow-next,.arrow .arrow-prev{width:30px;height:30px;border-radius:30px;border:none;background:#e4e0e0;outline:0;margin-right:2px}';
 		document.getElementsByTagName('head')[0].appendChild(styleElem);
 	}
 
@@ -420,25 +365,7 @@ if(arrowPrev.length != 0 && arrowNext.length != 0){
 
 	  let addBtn = document.createElement('div');
 	  addBtn.className = 'arrow';
-	  addBtn.innerHTML = `
-				<button name = "prevS" class = "arrow-prev" type = "submit">
-						<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-							 viewBox="0 0 477.175 477.175" xml:space="preserve">
-							<path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
-								c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/>
-						</svg>
-				</button>
-
-				<button name = "nextS" class = "arrow-next" type = "submit">
-					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						 viewBox="0 0 477.175 477.175" xml:space="preserve">
-						<path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
-							c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z
-							"/>
-					</svg>
-				</button>	
-	  `;
-
+	  addBtn.innerHTML ='<button name = "prevS" class = "arrow-prev" type = "submit"> < </button><button name = "nextS" class = "arrow-next" type = "submit"> > </button>';	
 			let body = document.getElementsByTagName('body')[0];
 				body.insertBefore(addBtn,body.children[1]);
 	}
@@ -449,21 +376,7 @@ if(arrowPrev.length != 0 && arrowNext.length != 0){
 			addBtnTop.name = 'top';
 			addBtnTop.className = 'btn-fixed';
 			
-			addBtnTop.innerHTML =`
-			<svg version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				 viewBox="0 0 284.929 284.929"
-				 xml:space="preserve">
-					<path d="M17.128,167.872c1.903,1.902,4.093,2.854,6.567,2.854c2.474,0,4.664-0.952,6.567-2.854L142.466,55.666l112.208,112.206
-						c1.902,1.902,4.093,2.854,6.563,2.854c2.478,0,4.668-0.952,6.57-2.854l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.563
-						c0-2.475-0.951-4.665-2.847-6.567L149.028,7.419c-1.901-1.906-4.088-2.853-6.562-2.853s-4.665,0.95-6.567,2.853L2.856,140.464
-						C0.95,142.367,0,144.554,0,147.034c0,2.468,0.953,4.658,2.856,6.561L17.128,167.872z"/>
-					<path d="M149.028,117.055c-1.901-1.906-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,250.1
-						C0.95,252.003,0,254.192,0,256.67c0,2.472,0.953,4.661,2.856,6.564l14.272,14.276c1.903,1.903,4.093,2.848,6.567,2.848
-						c2.474,0,4.664-0.951,6.567-2.848l112.204-112.209l112.208,112.209c1.902,1.903,4.093,2.852,6.563,2.852
-						c2.478,0,4.668-0.948,6.57-2.852l14.274-14.276c1.902-1.903,2.847-4.093,2.847-6.564c0-2.478-0.951-4.667-2.847-6.57
-						L149.028,117.055z"/>
-			</svg>
-			`;
+			addBtnTop.innerHTML ='^';
 
 			let body = document.getElementsByTagName('body')[0];
 				body.insertBefore(addBtnTop,body.children[0]);

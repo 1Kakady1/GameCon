@@ -57,7 +57,7 @@ bufTargetDot = 0;
     }
 
     function flagCountDot(dotParentElem){
-        let  siderDot = document.querySelectorAll(`.${dotParentElem} > .dot`), 
+        let  siderDot = document.querySelectorAll(dotParentElem+'> .dot'), 
               lengthMass = siderDot.length, j = 0;
 
               while (j < lengthMass) {

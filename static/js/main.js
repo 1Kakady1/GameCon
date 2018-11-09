@@ -40,6 +40,23 @@ if(flagVideo == true){
 	}
 }
 
+function createStyle() {
+    var e = document.createElement("style");
+    e.type = "text/css", e.innerHTML = ".game-post .post-content{width:70%}.slider .slider-items .content-preview{left:-325px;top:99px}@media screen and (max-width:1335px){.game-post .post-content{width:60%}}", document.getElementsByTagName("head")[0].appendChild(e)
+}
+
+function getInternetExplorerVersion() {
+    var e = -1;
+    if ("Microsoft Internet Explorer" == navigator.appName) {
+        var i = navigator.userAgent;
+        null != new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})").exec(i) && (e = parseFloat(RegExp.$1))
+    } else if ("Netscape" == navigator.appName) {
+        i = navigator.userAgent;
+        null != new RegExp("Trident/.*rv:([0-9]{1,}[.0-9]{0,})").exec(i) && (e = parseFloat(RegExp.$1))
+    }
+    return e
+} - 1 !== getInternetExplorerVersion() && (createStyle(), console.log("ie"));
+
 // lib wow
 var wow = new WOW(
   {
@@ -186,10 +203,11 @@ btnSearch.addEventListener("click", function(){
         event.preventDefault();
         $('.modal').show("slow").css('display','flex');
         $('body').css('overflow','hidden');
-        let $namePage = dataPage($(this).data('in'));
-        if(indexPage != $namePage[0]){
-            $( ".modal" ).load( `ajaxPage/${$namePage[0]}.html`);
-            indexPage = $namePage[0];
+        let namePage = dataPage($(this).data('in'));
+        if(indexPage != namePage[0]){
+        	
+            $(".modal").load( 'ajaxPage/'+namePage[0]+'.html?'+ new Date().getTime());
+            indexPage = namePage[0];
         }
     });
 
